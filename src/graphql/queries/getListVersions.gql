@@ -1,0 +1,86 @@
+query getListVersions($input: CarVersionListInput!) {
+	getListVersions(input: $input) {
+		brand
+		brandDetail {
+			id
+			image
+			isActive
+			isDisplayTopSearch
+			mediaDetail {
+				createdAt
+				deletedAt
+				fileName
+				filePathLG
+				filePathOriginal
+				filePathSM
+				id
+				isDeleted
+				mimeType
+				updatedAt
+				uploadBy
+			}
+			mediaId
+			name
+			slug
+			totalPost
+		}
+		createdAt
+		id
+		image
+		isActive
+		mediaDetail {
+			createdAt
+			deletedAt
+			fileName
+			filePathLG
+			filePathOriginal
+			filePathSM
+			id
+			isDeleted
+			mimeType
+			updatedAt
+			uploadBy
+		}
+		mediaId
+		model
+		modelDetail {
+			brand
+			brandMeta {
+				id
+				image
+				isActive
+				isDisplayTopSearch
+				mediaDetail {
+					createdAt
+					deletedAt
+					fileName
+					filePathLG
+					filePathOriginal
+					filePathSM
+					id
+					isDeleted
+					mimeType
+					updatedAt
+					uploadBy
+				}
+				mediaId
+				name
+				slug
+				totalPost
+			}
+			id
+			image
+			isActive
+			name
+			slug
+			totalPost
+		}
+		name
+		numKilometerCarRun
+		priceCarVersion
+		slug
+		typeCarVersion
+		updatedAt
+		yearManufacture
+	}
+}

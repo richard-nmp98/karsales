@@ -1,0 +1,25 @@
+query getListBrands {
+	getListBrands {
+		id
+		image
+		isActive
+		isDisplayTopSearch
+		mediaDetail {
+			createdAt
+			deletedAt
+			fileName
+			filePathLG
+			filePathOriginal
+			filePathSM
+			id
+			isDeleted
+			mimeType
+			updatedAt
+			uploadBy
+		}
+		mediaId
+		name
+		slug
+		totalPost
+	}
+}

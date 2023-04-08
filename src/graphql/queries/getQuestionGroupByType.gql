@@ -1,0 +1,10 @@
+query getQuestionGroupByType($input: QuestionGroupByTypeInput!) {
+	getQuestionGroupByType(input: $input) {
+		createdAt
+		id
+		name
+		questions
+		type
+		updatedAt
+	}
+}

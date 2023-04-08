@@ -1,0 +1,4447 @@
+"""
+AdminAuthConnection
+"""
+type AdminAuthConnection {
+	accessToken: String!
+	expireRefreshTokenDate: DateTime!
+	expireTokenDate: DateTime!
+	refreshToken: String!
+	user: AdminUser!
+}
+
+input AdminChangeStatusReviewInput {
+	active: Boolean!
+	id: String!
+}
+
+input AdminCreateBannerInput {
+	linkBanner: String
+	mediaIds: [String!]!
+	name: String!
+	positionId: String!
+}
+
+input AdminCreateBrandInput {
+	mediaId: String
+	name: String!
+}
+
+input AdminCreateBrandNewInput {
+	isDisplayTopSearch: Boolean!
+	mediaId: String
+	name: String!
+}
+
+input AdminCreateCarBuyingNeedInput {
+	brand: String!
+	budget: String
+	buyerName: String
+	descriptionOther: String
+	isCustomer: Boolean!
+	isInstallmentPurchase: Boolean!
+	isInsuranceConsultant: Boolean!
+	isOther: Boolean!
+	isVehicleInspectionService: Boolean!
+	model: String!
+	numKilometerCarRun: String
+	phone: String!
+	provinceId: String
+	status: StatusCarBuyingNeedEnum
+	userId: String
+	userSellerIds: [String!]
+	vehicleLife: String
+}
+
+input AdminCreateCarPurchaseCostProvinceInput {
+	bodyInsuranceOneYear: Float!
+	civilInsurance: Float!
+	licensePlateFee: Float!
+	provinceId: String!
+	registrationFeeNewCar: Float!
+	registrationFeeOldCar: Float!
+	registry: Float!
+	roadMaintenanceFee: Float!
+}
+
+input AdminCreateDriverType {
+	nameEn: String!
+	nameVi: String!
+}
+
+input AdminCreateFuelEconomy {
+	isLess: Boolean!
+	kilometer: Float!
+	liter: Float!
+	nameEn: String!
+	nameVi: String!
+}
+
+input AdminCreateModelnput {
+	brand: String!
+	name: String!
+}
+
+input AdminCreateMultiVersion {
+	mediaId: String
+	model: String!
+	name: String
+	numKilometerCarRun: String
+	priceCarVersion: Float!
+	yearManufacture: String
+}
+
+input AdminCreateMultiVersionInput {
+	multiVersions: [AdminCreateMultiVersion!]!
+}
+
+input AdminCreatePaymentItemInput {
+	amount: Float!
+	currency: PaymentItemCurrencyEnum!
+}
+
+input AdminCreateQuestionAnswerSimulationInput {
+	minuteFrom: Float!
+	minuteTo: Float!
+	no: Float!
+	point: Float!
+	secondFrom: Float!
+	secondTo: Float!
+}
+
+input AdminCreateQuestionGroupInput {
+	name: String!
+	questions: [String!]!
+}
+
+input AdminCreateQuestionInput {
+	answers: [AdminEditQuestionAnswerInput!]!
+	answerType: QuestionAnswerTypeEnum!
+	content: String!
+	explainAnswer: String
+	imageExplainAnswer: String
+	images: [String!]
+	no: String!
+	type: [QuestionTypeEnum!]!
+}
+
+input AdminCreateQuestionSimulationGroupInput {
+	name: String!
+	questions: [String!]!
+}
+
+input AdminCreateQuestionSimulationInput {
+	answers: [AdminCreateQuestionAnswerSimulationInput!]!
+	content: String!
+	explainAnswer: String
+	images: [String!]
+	no: Float!
+	type: [QuestionSimulationTypeEnum!]!
+	videos: [String!]
+}
+
+input AdminCreateSeatInput {
+	name: String!
+	value: Float!
+}
+
+input AdminCreateVersionInput {
+	mediaId: String
+	model: String!
+	name: String!
+	numKilometerCarRun: String
+	priceCarVersion: Float!
+	yearManufacture: String
+}
+
+input AdminDashboardTotalInput {
+	numberMonth: Float
+}
+
+input AdminDeleteOptionsInput {
+	id: String!
+	type: PostMetaTypeEnum!
+}
+
+input AdminEditBannerInput {
+	id: String!
+	linkBanner: String
+	mediaIds: [String!]!
+	name: String!
+	positionId: String!
+}
+
+input AdminEditBrandInput {
+	id: String!
+	mediaId: String
+	name: String!
+}
+
+input AdminEditBrandNewInput {
+	id: String!
+	isDisplayTopSearch: Boolean!
+	mediaId: String
+	name: String!
+}
+
+input AdminEditCarBuyingNeedInput {
+	brand: String!
+	budget: String
+	buyerName: String
+	descriptionOther: String
+	id: String!
+	isCustomer: Boolean!
+	isInstallmentPurchase: Boolean!
+	isInsuranceConsultant: Boolean!
+	isOther: Boolean!
+	isVehicleInspectionService: Boolean!
+	model: String!
+	numKilometerCarRun: String
+	phone: String!
+	provinceId: String
+	status: StatusCarBuyingNeedEnum
+	statusBuyingDemand: StatusBuyingDemandEnum
+	userId: String
+	userSellerIds: [String!]
+	vehicleLife: String
+}
+
+input AdminEditCarPurchaseCostProvinceInput {
+	bodyInsuranceOneYear: Float!
+	civilInsurance: Float!
+	id: String!
+	licensePlateFee: Float!
+	registrationFeeNewCar: Float!
+	registrationFeeOldCar: Float!
+	registry: Float!
+	roadMaintenanceFee: Float!
+}
+
+input AdminEditDriverType {
+	id: String!
+	nameEn: String!
+	nameVi: String!
+}
+
+input AdminEditFuelEconomy {
+	id: String!
+	isLess: Boolean!
+	kilometer: Float!
+	liter: Float!
+	nameEn: String!
+	nameVi: String!
+}
+
+input AdminEditGarageInput {
+	address: String!
+	city: String
+	description: String!
+	district: String
+	email: String
+	id: String!
+	latitude: Float!
+	longitude: Float!
+	medias: [String!]!
+	phone: String!
+	province: String
+	services: [GarageServicesTypeEnum!]!
+	title: String!
+	userId: String
+	ward: String
+	website: String
+}
+
+input AdminEditModelnput {
+	brand: String!
+	id: String!
+	name: String!
+}
+
+input AdminEditMultiVersion {
+	id: String!
+	mediaId: String
+	model: String!
+	name: String
+	numKilometerCarRun: String
+	priceCarVersion: Float!
+	yearManufacture: String
+}
+
+input AdminEditMultiVersionInput {
+	multiVersions: [AdminEditMultiVersion!]!
+}
+
+input AdminEditParkingInput {
+	address: String!
+	closeOnPublicHolidays: Boolean!
+	description: String!
+	email: String
+	id: String!
+	latitude: Float!
+	longitude: Float!
+	medias: [String!]!
+	phone: String!
+	priceProperties: [NewParkingWokingPricePropertiesInput!]!
+	sameWeekOfOperation: Boolean!
+	title: String!
+	total: Float!
+	userId: String
+	website: String
+	workingTimes: [NewParkingWokingTimeInput!]
+}
+
+input AdminEditPaymentItemInput {
+	amount: Float!
+	currency: PaymentItemCurrencyEnum!
+	id: String!
+}
+
+input AdminEditPostInput {
+	descriptionMeta: NewPostDescriptionInput!
+	engine: NewPostEngineInput
+	id: String!
+	medias: [String!]
+	mediasHidePlate: [String!]
+	meta: NewPostMetaInput!
+	plan: NewPostPlanInput!
+	plateHidden: Boolean
+	publishType: NewPostPublishTypeInput!
+	styleMeta: NewPostStyleInput
+	title: String
+	userId: String!
+	videoUrl: String
+}
+
+input AdminEditQuestionAnswerInput {
+	content: String!
+	correctAnswer: Boolean!
+	no: Float!
+}
+
+input AdminEditQuestionAnswerSimulationInput {
+	minuteFrom: Float!
+	minuteTo: Float!
+	no: Float!
+	point: Float!
+	secondFrom: Float!
+	secondTo: Float!
+}
+
+input AdminEditQuestionGroupInput {
+	id: String!
+	name: String!
+	questions: [String!]!
+}
+
+input AdminEditQuestionInput {
+	answers: [AdminEditQuestionAnswerInput!]!
+	answerType: QuestionAnswerTypeEnum!
+	content: String!
+	explainAnswer: String
+	imageExplainAnswer: String
+	images: [String!]
+	no: String!
+	type: [QuestionTypeEnum!]!
+}
+
+input AdminEditQuestionSimulationGroupInput {
+	id: String!
+	name: String!
+	questions: [String!]!
+}
+
+input AdminEditQuestionSimulationInput {
+	answers: [AdminEditQuestionAnswerSimulationInput!]
+	content: String
+	explainAnswer: String
+	id: String!
+	images: [String!]
+	type: [QuestionSimulationTypeEnum!]
+	videos: [String!]
+}
+
+input AdminEditSeatInput {
+	id: String!
+	name: String!
+	value: Float!
+}
+
+input AdminEditVersionInput {
+	id: String!
+	mediaId: String
+	model: String!
+	name: String!
+	numKilometerCarRun: String
+	priceCarVersion: Float!
+	yearManufacture: String
+}
+
+input AdminListPostInput {
+	brand: String
+	createFrom: String
+	createTo: String
+	keyword: String
+	location: String
+	price: Float
+	skip: Float
+	status: PostStatusEnum
+	take: Float
+	titleAndPostId: String
+	userId: String
+}
+
+input AdminListQuestionGroupInput {
+	keyword: String
+	skip: Float
+	take: Float
+}
+
+input AdminListQuestionInput {
+	keyword: String
+	skip: Float
+	take: Float
+	type: QuestionTypeEnum
+}
+
+input AdminListQuestionSimulationGroupInput {
+	keyword: String
+	skip: Float
+	take: Float
+}
+
+input AdminListQuestionSimulationInput {
+	keyword: String
+	skip: Float
+	take: Float
+	type: QuestionSimulationTypeEnum
+}
+
+input AdminLoginInput {
+	deviceToken: String!
+	email: String!
+	password: String!
+}
+
+input AdminNewGarageInput {
+	address: String!
+	city: String
+	description: String!
+	district: String
+	email: String
+	latitude: Float!
+	longitude: Float!
+	medias: [String!]!
+	phone: String!
+	province: String
+	services: [GarageServicesTypeEnum!]!
+	title: String!
+	userId: String
+	ward: String
+	website: String
+}
+
+input AdminNewParkingInput {
+	address: String!
+	closeOnPublicHolidays: Boolean!
+	description: String!
+	email: String
+	latitude: Float!
+	longitude: Float!
+	medias: [String!]!
+	phone: String!
+	priceProperties: [NewParkingWokingPricePropertiesInput!]!
+	sameWeekOfOperation: Boolean!
+	title: String!
+	total: Float!
+	userId: String
+	website: String
+	workingTimes: [NewParkingWokingTimeInput!]!
+}
+
+input AdminNewPostInput {
+	descriptionMeta: NewPostDescriptionInput!
+	engine: NewPostEngineInput
+	medias: [String!]
+	mediasHidePlate: [String!]
+	meta: NewPostMetaInput!
+	plan: NewPostPlanInput!
+	plateHidden: Boolean
+	publishType: NewPostPublishTypeInput!
+	styleMeta: NewPostStyleInput
+	title: String
+	userId: String!
+	videoUrl: String
+}
+
+type AdminNotification implements Node {
+	adminUserId: String
+	contentEn: String!
+	contentVi: String!
+	createdAt: String!
+	id: ID!
+	schedule: String
+	screenType: AdminNotificationScreenTypeEnum
+	titleEn: String!
+	titleVi: String!
+	type: AdminNotificationEmailTypeEnum!
+	updatedAt: String!
+}
+
+"""
+List Notification
+"""
+type AdminNotificationConnection implements Connection {
+	items: [AdminNotification!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+enum AdminNotificationEmailTypeEnum {
+	ALL
+	EMAIL
+	NOTIFICATION
+}
+
+input AdminNotificationPaginationInput {
+	createFrom: String
+	createTo: String
+	keyword: String
+	skip: Float
+	take: Float
+	type: AdminNotificationEmailTypeEnum
+}
+
+enum AdminNotificationScreenTypeEnum {
+	POSTS
+}
+
+input AdminSendNotificationInput {
+	contentEn: String!
+	contentVi: String!
+	notificationType: AdminNotificationEmailTypeEnum!
+	role: UserRoleEnum!
+	schedule: String
+	screenType: AdminNotificationScreenTypeEnum
+	titleEn: String!
+	titleVi: String!
+	userIds: [String!]!
+}
+
+input AdminUpdateBalance {
+	type: UserBalanceTypeEnum!
+	userId: String!
+	value: Float!
+}
+
+input AdminUpdateStatusBannerInput {
+	id: String!
+}
+
+input AdminUpdateStatusGarageInput {
+	id: String!
+	reason: String
+	status: StatusCommonEnum!
+}
+
+input AdminUpdateStatusInput {
+	note: String
+	postId: String!
+	status: PostStatusEnum!
+}
+
+input AdminUpdateStatusOptionsInput {
+	active: Boolean!
+	id: String!
+	type: PostMetaTypeEnum!
+}
+
+input AdminUpdateStatusPlanInput {
+	id: String!
+	status: Boolean!
+}
+
+input AdminUpdateStatusTopSearchBrandInput {
+	id: String!
+	isDisplayTopSearch: Boolean!
+}
+
+input AdminUpdateTransferRequestInput {
+	approve: Boolean!
+	id: String!
+	moneyTransferReason: String
+}
+
+input AdminUpdateUserAvatarInput {
+	mediaId: String!
+	userId: String!
+}
+
+input AdminUpdateUserInput {
+	createdAt: DateTime
+	email: String
+	firstName: String
+	lastName: String
+	phone: String
+	status: UserStatusEnum
+	userId: String!
+}
+
+type AdminUser implements Node {
+	email: String!
+	firstName: String
+	fullName: String
+	id: ID!
+	isActive: Boolean!
+	lastName: String
+}
+
+input AdminVerifyForgotInput {
+	confirmPassword: String!
+	password: String!
+	token: String!
+}
+
+input AppLoginInput {
+	deviceToken: String!
+	email: String!
+	password: String!
+}
+
+input AppSignOutInput {
+	deviceToken: String
+}
+
+"""
+AuthConnection
+"""
+type AuthConnection {
+	accessToken: String!
+	expireRefreshTokenDate: DateTime!
+	expireTokenDate: DateTime!
+	refreshToken: String!
+	user: UserEntity!
+}
+
+type BanksEntity implements Node {
+	code: String!
+	id: ID!
+	isActive: Boolean!
+	logo: String!
+	name: String!
+}
+
+input BannerDetailInput {
+	id: String!
+}
+
+type BannerEntity implements Node {
+	bannerProfile: String
+	bannerSearch: String
+	id: ID!
+	name: String!
+}
+
+"""
+List banner group
+"""
+type BannerGroupConnection implements Connection {
+	items: [BannerGroupEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+type BannerGroupEntity implements Node {
+	createdAt: DateTime!
+	id: ID!
+	isActive: Boolean!
+	linkBanner: String
+	mediaIds: [String!]!
+	medias: [Media!]
+	name: String!
+	positionId: String!
+	updatedAt: DateTime!
+}
+
+type BannerPositionEntity implements Node {
+	createdAt: DateTime!
+	id: ID!
+	name: String!
+	ratioHeight: Float!
+	ratioWidth: Float!
+	type: BannerPositionEnum!
+	updatedAt: DateTime!
+}
+
+enum BannerPositionEnum {
+	HOME_TOP
+	POST_CAR
+	PROFILE_BOTTOM
+	SEARCH_TOP
+	SERVICE_TOP
+	SIMULATION_EXAM_TOP
+	WEBSITE_BODY
+	WEBSITE_TOP
+}
+
+input BannerPositionInput {
+	id: String!
+}
+
+input CalculatingInstallmentCarLoanInput {
+	"""
+	Loại xe cũ / mới
+	"""
+	carType: CarTypeEnum!
+
+	"""
+	% Lãi xuất
+	"""
+	interestRate: Float!
+
+	"""
+	Thời hạn vay
+	"""
+	loanTime: Float!
+
+	"""
+	Hình thức chi trả
+	"""
+	paymentForm: PaymentFormEnum!
+
+	"""
+	Giá trị xe trả trước %
+	"""
+	prepaidCarAmountRate: Float!
+
+	"""
+	Giá trị xe theo phiên bản
+	"""
+	priceCarVersion: Float!
+
+	"""
+	Nơi đăng ký
+	"""
+	provinceId: String!
+
+	"""
+	Phiên bản
+	"""
+	version: String
+}
+
+type CarBodyTypeEntity implements Node {
+	createdAt: DateTime!
+	id: ID!
+	isActive: Boolean!
+	name: String!
+	slug: String!
+}
+
+type CarBrandEntity implements Node {
+	id: ID!
+	image: String
+	isActive: Boolean!
+	isDisplayTopSearch: Boolean!
+	mediaDetail: Media
+	mediaId: String
+	name: String!
+	slug: String!
+	totalPost: Float
+}
+
+input CarBrandListInput {
+	brandSlug: [String!]
+	isDisplayTopSearch: Boolean!
+	keyword: String
+}
+
+"""
+List car buying needs
+"""
+type CarBuyingNeedConnection implements Connection {
+	items: [CarBuyingNeedEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+type CarBuyingNeedEntity implements Node {
+	brand: String!
+	brandDetail: CarBrandEntity
+	budget: String
+	buyerName: String
+	carBuyingNeedStatusCares: [CarBuyingNeedStatusCareEntity!]
+	createdAt: DateTime!
+	customerCreatedBySellerId: String
+	descriptionOther: String
+	id: ID!
+	isCustomer: Boolean!
+	isInstallmentPurchase: Boolean!
+	isInsuranceConsultant: Boolean!
+	isOther: Boolean!
+	isVehicleInspectionService: Boolean!
+	model: String!
+	modelDetail: CarModelEntity
+	numKilometerCarRun: String
+	phone: String!
+	provinceDetail: ProviceEntity
+	provinceId: String
+	status: StatusCarBuyingNeedEnum!
+	statusBuyingDemand: StatusBuyingDemandEnum!
+	updatedAt: DateTime!
+	userDetail: UserEntity
+	userId: String
+	userSellerDetails: [UserEntity!]
+	userSellerIds: [String!]
+	vehicleLife: String
+}
+
+type CarBuyingNeedStatusCareEntity implements Node {
+	carBuyingNeedId: String!
+	createdAt: DateTime!
+	id: ID!
+	status: StatusCarBuyingNeedEnum!
+	updatedAt: DateTime!
+	userDetail: UserEntity
+	userId: String!
+	userSellerId: String!
+}
+
+type CarColourEntity implements Node {
+	createdAt: DateTime!
+	id: ID!
+	isActive: Boolean!
+	name: String!
+	slug: String!
+}
+
+enum CarConditionEnum {
+	NEAR_NEW_AND_DEMO
+	NEW
+	OLD
+	USED
+}
+
+type CarDoorEntity implements Node {
+	createdAt: DateTime!
+	id: ID!
+	isActive: Boolean!
+	name: String!
+	value: Float!
+}
+
+type CarDriverTypeEntity implements Node {
+	createdAt: DateTime!
+	id: ID!
+	isActive: Boolean!
+	nameEn: String!
+	nameVi: String!
+	slug: String!
+}
+
+type CarFuelEconomyEntity implements Node {
+	createdAt: DateTime!
+	id: ID!
+	isActive: Boolean!
+	isLess: Boolean!
+	kilometer: Float!
+	liter: Float!
+	nameEn: String!
+	nameVi: String!
+}
+
+type CarFuelTypeEntity implements Node {
+	createdAt: DateTime!
+	id: ID!
+	isActive: Boolean!
+	name: String!
+	slug: String!
+}
+
+enum CarInspectionEnum {
+	CERTIFIED
+	CHECK_WITH_SELLER
+	INSPECTED
+	OTHERS
+}
+
+type CarModelEntity implements Node {
+	brand: String!
+	brandMeta: CarBrandEntity
+	id: ID!
+	image: String
+	isActive: Boolean!
+	name: String!
+	slug: String!
+	totalPost: Float
+}
+
+input CarModelListInput {
+	brand: [String!]
+	keyword: String
+	modelSlug: [String!]
+}
+
+enum CarOfferEnum {
+	AVAILBLE_WEEKDAYS
+	AVAILBLE_WEEKKEND
+	EXPERIENCED_INSPECTOR
+	FINANCIAL_AVAILBLE
+	INSURANCE_AVAILBLE
+}
+
+type CarPurchaseCostEstimateMaster {
+	"""
+	Bảo hiểm thân võ (1 năm)
+	"""
+	bodyInsuranceOneYear: Float!
+
+	"""
+	Bảo hiểm dân sự
+	"""
+	civilInsurance: Float!
+
+	"""
+	Lãi xuất (%)
+	"""
+	interestRate: Float!
+
+	"""
+	Phí biển số
+	"""
+	licensePlateFee: Float!
+
+	"""
+	Chi tiết dự toán
+	"""
+	listCarPurchaseCostEstimaterDetails: [CarPurchaseCostEstimaterDetails!]!
+
+	"""
+	Thời hạn vay
+	"""
+	loanTime: Float!
+
+	"""
+	Giá trị xe trả trước %
+	"""
+	prepaidCarAmountRate: Float!
+
+	"""
+	Giá xe theo phiên bản
+	"""
+	priceCarVersion: Float!
+
+	"""
+	Sô tiền trả trước
+	"""
+	pricePrepaidCar: Float!
+
+	"""
+	Phí trước bạ
+	"""
+	registrationFee: Float!
+
+	"""
+	Phí đăng kiểm
+	"""
+	registry: Float!
+
+	"""
+	Phí bảo trì đường bộ
+	"""
+	roadMaintenanceFee: Float!
+
+	"""
+	Giá lăn bánh
+	"""
+	rollingPrice: Float!
+
+	"""
+	Tổng tiền còn lại Gốc & Lãi
+	"""
+	totalAmountRemainPrincipalAndInterest: Float!
+
+	"""
+	Chi tiết các loại phí
+	"""
+	totalCost: Float!
+
+	"""
+	Tổng chi phí mua xe ước tính
+	"""
+	totalEstimatedCarPurchaseCost: Float!
+
+	"""
+	Tổng tiền lãi
+	"""
+	totalInterest: Float!
+
+	"""
+	Tổng tiền vay
+	"""
+	totalLoanAmount: Float!
+}
+
+type CarPurchaseCostEstimaterDetails {
+	"""
+	Trả lãi
+	"""
+	interestAmount: Float!
+
+	"""
+	Trả gốc
+	"""
+	principalAmount: Float!
+
+	"""
+	Dư nợ còn lại
+	"""
+	remainAmount: Float!
+
+	"""
+	Đợt
+	"""
+	session: Float!
+
+	"""
+	Tổng Gốc + Lãi
+	"""
+	totalAmount: Float!
+}
+
+"""
+List Car Purchase Cost Province
+"""
+type CarPurchaseCostProvinceConnection implements Connection {
+	items: [CarPurchaseCostProvinceEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+type CarPurchaseCostProvinceEntity implements Node {
+	bodyInsuranceOneYear: Float!
+	civilInsurance: Float!
+	createdAt: DateTime!
+	id: ID!
+	isActive: Boolean!
+	licensePlateFee: Float!
+	otherCost: Float!
+	proviceDetail: ProviceEntity
+	provinceId: String!
+	registrationFeeNewCar: Float!
+	registrationFeeOldCar: Float!
+	registry: Float!
+	roadMaintenanceFee: Float!
+	updatedAt: DateTime!
+}
+
+enum CarRemoteAssessmentEnum {
+	CHECK_WITH_SELLER
+	NO
+	YES
+}
+
+type CarSeatEntity implements Node {
+	createdAt: DateTime!
+	fixed: Boolean!
+	id: ID!
+	isActive: Boolean!
+	name: String!
+	value: Float!
+}
+
+enum CarTransmissionEnum {
+	AMT
+	AUTOMATIC
+	MANUAL
+}
+
+enum CarTypeEnum {
+	NEW
+	OLD
+}
+
+"""
+List Car Version
+"""
+type CarVersionConnection implements Connection {
+	items: [CarVersionEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+type CarVersionEntity implements Node {
+	brand: String
+	brandDetail: CarBrandEntity
+	createdAt: DateTime!
+	id: ID!
+	image: String
+	isActive: Boolean!
+	mediaDetail: Media
+	mediaId: String
+	model: String!
+	modelDetail: CarModelEntity
+	name: String
+	numKilometerCarRun: String
+	priceCarVersion: Float!
+	slug: String
+	typeCarVersion: TypeCarVersionEnum!
+	updatedAt: DateTime!
+	yearManufacture: String
+}
+
+input CarVersionListInput {
+	keyword: String
+	model: String!
+}
+
+type CarVersionMarketPrice {
+	"""
+	Giá trung bình
+	"""
+	averagePrice: Float!
+
+	"""
+	Giá cao nhất
+	"""
+	highestPrice: Float!
+
+	"""
+	Giá thấp nhất
+	"""
+	lowestPrice: Float!
+}
+
+type CarYearEntity implements Node {
+	id: ID!
+	isActive: Boolean!
+	name: String!
+}
+
+type CategoryServicesEntity implements Node {
+	createdAt: DateTime!
+	id: ID!
+	image: String!
+	isActive: Boolean!
+	isAvailable: Boolean!
+	nameEn: String!
+	nameVi: String!
+	order: Float!
+	slug: String!
+	updatedAt: DateTime!
+}
+
+"""
+List center driver lisence
+"""
+type CenterDriverLicenseConnection implements Connection {
+	items: [CenterDriverLicenseEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+type CenterDriverLicenseEntity implements Node {
+	address: String
+	averageRating: Float!
+	createdAt: DateTime!
+	description: String!
+	district: String!
+	districtDetail: DistrictsEntity
+	email: String
+	id: ID!
+	isActive: Boolean!
+	medias: [CenterDriverLicenseMediasEntity!]
+	phone: String
+	province: String!
+	provinceDetail: ProviceEntity
+	slug: String!
+	title: String!
+	totalRating: Float!
+	totalRatingScore: Float!
+	updatedAt: DateTime!
+	ward: String!
+	wardDetail: WardsEntity
+	website: String
+}
+
+type CenterDriverLicenseMediasEntity implements Node {
+	centerId: String!
+	createdAt: DateTime!
+	id: ID!
+	mediaDetail: Media
+	mediaId: String!
+	updatedAt: DateTime!
+}
+
+"""
+List center driver lisence
+"""
+type CenterDriverLicenseRatingConnection implements Connection {
+	items: [CenterDriverLicenseRatingEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+type CenterDriverLicenseRatingEntity implements Node {
+	centerId: String!
+	content: String
+	createdAt: DateTime!
+	id: ID!
+	rating: Float!
+	updatedAt: DateTime!
+	user: UserEntity
+	userId: String!
+}
+
+input CheckEmailInput {
+	email: String!
+}
+
+input CheckPhoneInput {
+	phone: String!
+	prefixPhone: String
+}
+
+input CheckReferralCodeInput {
+	referralCode: String!
+}
+
+input CheckRoomInput {
+	userId: String!
+}
+
+"""
+List user
+"""
+type CheckUserForgotPassword {
+	type: ForgotPasswordTypeEnum!
+}
+
+input CheckUserIdInput {
+	userId: String!
+}
+
+interface Connection {
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+"""
+count post by status
+"""
+type CountPostByStatus {
+	count: Float!
+	status: PostStatusEnum!
+}
+
+"""
+count post
+"""
+type CountPostWithOptionsType {
+	count: Float!
+	type: PostMetaTypeEnum!
+	value: String!
+}
+
+"""
+count post by status
+"""
+type CountQuestionAndAnswer {
+	answer: Float!
+	question: Float!
+	type: QuestionTypeEnum!
+}
+
+"""
+count post by status
+"""
+type CountQuestionAndAnswerSimulation {
+	question: Float!
+	type: QuestionSimulationGroupTypeEnum!
+}
+
+"""
+List Countries
+"""
+type CountriesConnection implements Connection {
+	items: [CountriesEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+type CountriesEntity implements Node {
+	code: String!
+	id: ID!
+	name: String!
+}
+
+input CreateCarBuyingNeedInput {
+	brand: String!
+	budget: String
+	buyerName: String
+	descriptionOther: String
+	isInstallmentPurchase: Boolean!
+	isInsuranceConsultant: Boolean!
+	isOther: Boolean!
+	isVehicleInspectionService: Boolean!
+	model: String!
+	numKilometerCarRun: String
+	phone: String!
+	provinceId: String
+	vehicleLife: String
+}
+
+input CreateMediaWithPathInput {
+	path: String!
+}
+
+input CreateRatingCenterDriverLisenseInput {
+	centerId: String!
+	content: String
+	rating: Float!
+}
+
+input CreateRatingGarageInput {
+	content: String
+	garageId: String!
+	rating: Float!
+}
+
+input CreateRatingInput {
+	content: String
+	rating: Float!
+	sellerStore: String!
+}
+
+input CreateReviewInput {
+	category: String!
+	contentEn: String
+	contentVi: String
+	descriptionEn: String
+	descriptionVi: String
+	mediaIds: [String!]!
+	nameEn: String
+	nameVi: String
+}
+
+input CreateRoomInput {
+	image: String
+	roomName: String
+	roomType: RoomTypeEnum!
+	userIds: [String!]!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+enum DayEnum {
+	FRIDAY
+	MONDAY
+	SATURDAY
+	SUNDAY
+	THURSDAY
+	TUESDAY
+	WEDNESDAY
+}
+
+input DetailCommonInput {
+	id: String!
+}
+
+input DetailInput {
+	id: String!
+}
+
+input DetailRating {
+	id: String!
+}
+
+"""
+List Province
+"""
+type DistrictsConnection implements Connection {
+	items: [DistrictsEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+type DistrictsEntity implements Node {
+	id: ID!
+	isActive: Boolean!
+	name: String!
+	prefix: String!
+	provinceCode: Float!
+}
+
+input DistrictsPagingInput {
+	keyword: String
+	provineCode: String!
+	skip: Float
+	take: Float
+}
+
+input EditCarBuyingNeedInput {
+	brand: String!
+	budget: String
+	buyerName: String
+	descriptionOther: String
+	id: String!
+	isInstallmentPurchase: Boolean!
+	isInsuranceConsultant: Boolean!
+	isOther: Boolean!
+	isVehicleInspectionService: Boolean!
+	model: String!
+	numKilometerCarRun: String
+	phone: String!
+	provinceId: String
+	statusBuyingDemand: StatusBuyingDemandEnum
+	vehicleLife: String
+}
+
+input EditCenterDriverLisenseInput {
+	address: String!
+	city: String
+	description: String!
+	district: String!
+	email: String
+	id: String!
+	medias: [String!]!
+	phone: String
+	province: String!
+	title: String!
+	ward: String!
+	website: String
+}
+
+input EditGarageInput {
+	address: String!
+	city: String
+	description: String!
+	district: String
+	email: String
+	id: String!
+	latitude: Float!
+	longitude: Float!
+	medias: [String!]!
+	phone: String!
+	province: String
+	services: [GarageServicesTypeEnum!]!
+	title: String!
+	ward: String
+	website: String
+}
+
+input EditParkingInput {
+	address: String!
+	closeOnPublicHolidays: Boolean!
+	description: String!
+	email: String
+	id: String!
+	latitude: Float!
+	longitude: Float!
+	medias: [String!]!
+	phone: String!
+	priceProperties: [NewParkingWokingPricePropertiesInput!]!
+	sameWeekOfOperation: Boolean!
+	title: String!
+	total: Float!
+	website: String
+	workingTimes: [NewParkingWokingTimeInput!]
+}
+
+input EditPostInput {
+	descriptionMeta: NewPostDescriptionInput!
+	engine: NewPostEngineInput
+	id: String!
+	medias: [String!]
+	mediasHidePlate: [String!]
+	meta: NewPostMetaInput!
+	plan: NewPostPlanInput!
+	plateHidden: Boolean
+	publishType: NewPostPublishTypeInput!
+	styleMeta: NewPostStyleInput
+	title: String
+	videoUrl: String
+}
+
+input EditReviewInput {
+	category: String!
+	contentEn: String
+	contentVi: String
+	descriptionEn: String
+	descriptionVi: String
+	id: String!
+	mediaIds: [String!]!
+	nameEn: String
+	nameVi: String
+}
+
+input EditStatusBuyingDemandInput {
+	id: String!
+	statusBuyingDemand: StatusBuyingDemandEnum
+}
+
+input EditStatusCarBuyingNeedEnumInput {
+	carBuyingNeedId: String!
+	status: StatusCarBuyingNeedEnum
+	userId: String!
+	userSellerId: String
+}
+
+enum ForgotPasswordTypeEnum {
+	EMAIL
+	PHONE
+}
+
+"""
+List garage center
+"""
+type GarageConnection implements Connection {
+	items: [GarageEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+type GarageEntity implements Node {
+	address: String
+	averageRating: Float!
+	createdAt: DateTime!
+	description: String!
+	distance: Float
+	district: String
+	districtDetail: DistrictsEntity
+	email: String
+	id: ID!
+	isActive: Boolean!
+	latitude: Float
+	location: GeoJSONPoint
+	longitude: Float
+	mediaIds: [String!]!
+	medias: [GarageMediasEntity!]
+	phone: String!
+	province: String
+	provinceDetail: ProviceEntity
+	reason: String
+	services: [GarageServicesTypeEnum!]!
+	slug: String!
+	status: StatusCommonEnum!
+	title: String!
+	totalRating: Float!
+	totalRatingScore: Float!
+	updatedAt: DateTime!
+	user: UserEntity
+	userId: String
+	ward: String
+	wardDetail: WardsEntity
+	website: String
+}
+
+enum GarageListSortTypeEnum {
+	LATEST
+	NEAREST
+	RATING_ASC
+	RATING_DESC
+}
+
+type GarageMediasEntity implements Node {
+	createdAt: DateTime!
+	garageId: String!
+	id: ID!
+	mediaDetail: Media
+	mediaId: String!
+	updatedAt: DateTime!
+}
+
+"""
+List garage rating
+"""
+type GarageRatingConnection implements Connection {
+	items: [GarageRatingEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+type GarageRatingEntity implements Node {
+	content: String
+	createdAt: DateTime!
+	garageId: String!
+	id: ID!
+	rating: Float!
+	updatedAt: DateTime!
+	user: UserEntity
+	userId: String!
+}
+
+enum GarageServicesTypeEnum {
+	CAR_CONSULTATION
+	CAR_INSPECTION
+	DETAILINGS
+	MAINTENANCE_WARRANTY
+	REPAIR
+	SPARE_PARTS
+	TOWING
+	TYRE_REPLACEMENT
+	WASHING
+}
+
+"""
+Geometry scalar type
+"""
+scalar GeoJSONPoint
+
+input GetCountPostByTypeInput {
+	type: PostMetaTypeEnum!
+	value: String!
+}
+
+input GetMessagesInput {
+	limit: Float
+	page: Float
+	roomId: String!
+}
+
+input GetRoomInput {
+	keyword: String
+	limit: Float
+	page: Float
+}
+
+enum LanguageEnum {
+	EN
+	VI
+}
+
+input LikeInput {
+	postId: String!
+}
+
+input ListCenterDriverLisenseInput {
+	createFrom: String
+	createTo: String
+	district: String
+	keyword: String
+	province: String
+	rating: SortTypeEnum
+	skip: Float
+	take: Float
+	ward: String
+}
+
+input ListCenterDriverLisenseRatingInput {
+	centerId: String!
+	skip: Float
+	take: Float
+}
+
+input ListGarageInput {
+	createFrom: String
+	createTo: String
+	district: String
+	keyword: String
+	location: ListGarageLocationInput
+	province: String
+	services: [GarageServicesTypeEnum!]
+	skip: Float
+	sort: GarageListSortTypeEnum!
+	take: Float
+	ward: String
+}
+
+input ListGarageLocationInput {
+	distance: Float
+	latitude: Float!
+	longitude: Float!
+}
+
+input ListGarageRatingInput {
+	garageId: String!
+	skip: Float
+	take: Float
+}
+
+input ListNotificationInput {
+	skip: Float
+	take: Float
+}
+
+input ListParkingInput {
+	createFrom: String
+	createTo: String
+	keyword: String
+	location: ListGarageLocationInput
+	skip: Float
+	sort: GarageListSortTypeEnum
+	take: Float
+}
+
+input ListPostInput {
+	keyword: String
+	options: ListPostOptionsInput
+	skip: Float
+	take: Float
+	userId: String
+}
+
+input ListPostOptionsInput {
+	bodyType: [String!]
+	brand: [String!]
+	certified: [CarInspectionEnum!]
+	cityId: String
+	colour: [String!]
+	condition: [CarConditionEnum!]
+	countryCode: String
+	currency: PaymentItemCurrencyEnum
+	doors: [String!]
+	driverType: [String!]
+	fuelType: [String!]
+	fuleEconomy: [String!]
+	inspected: [CarInspectionEnum!]
+	model: [String!]
+	odometerMax: Float
+	odometerMin: Float
+	priceMax: Float
+	priceMin: Float
+	seats: [String!]
+	sort: PostSortType
+	transmission: [CarTransmissionEnum!]
+	yearMax: String
+	yearMin: String
+}
+
+input ListPostSavedInput {
+	keyword: String
+	skip: Float
+	take: Float
+}
+
+input ListQuestionSimulationGroupInput {
+	keyword: String
+	skip: Float
+	take: Float
+}
+
+input LogoutUserInput {
+	deviceToken: String!
+}
+
+input MarketPriceCarVersionInput {
+	brand: String!
+	model: String!
+}
+
+type Media implements Node {
+	createdAt: DateTime!
+	deletedAt: DateTime
+	fileName: String
+	filePathLG: String
+	filePathOriginal: String
+	filePathSM: String
+	id: ID!
+	isDeleted: Boolean!
+	mimeType: String
+	updatedAt: DateTime!
+	uploadBy: String
+}
+
+type Message implements Node {
+	content: String
+	createdAt: String!
+	id: ID!
+	isDelete: Boolean!
+	media: [MessageMediaDetail!]
+	mediaId: String
+	messageType: MessageTypeEnum!
+	parent: Message
+	parentId: String
+	post: PostEntity
+	postId: String
+	roomId: String!
+	updatedAt: String!
+	user: UserEntity
+	userId: String!
+}
+
+type MessageConnection {
+	items: [Message!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+type MessageMediaDetail implements Node {
+	filePathLG: String
+	filePathOriginal: String!
+	filePathSM: String
+	id: ID!
+	imageName: String!
+	mediaId: String!
+	messageType: MessageTypeEnum!
+}
+
+type MessageSeen implements Node {
+	createdAt: String!
+	id: ID!
+	isSeen: Boolean!
+	messageId: String
+	roomId: String!
+	seenAt: String
+	updatedAt: String!
+	userId: String!
+}
+
+enum MessageTypeEnum {
+	FILE
+	IMAGE
+	LOCATION
+	POST
+	TEXT
+	VIDEO
+}
+
+type Mutation {
+	activeEmail(input: UserConfirmActiveEmailInput!): UserEntity!
+
+	"""
+	add customer car buying needs
+	"""
+	addCustomerCarBuyingNeed(id: String!): CarBuyingNeedEntity
+
+	"""
+	admin approve post
+	"""
+	adminApprovePost(input: AdminUpdateStatusInput!): PostEntity
+
+	"""
+	Get list Reviews for admin
+	"""
+	adminChangeStatusReview(input: AdminChangeStatusReviewInput!): ReviewsEntity
+
+	"""
+	create banner for admin
+	"""
+	adminCreateBanner(input: AdminCreateBannerInput!): BannerGroupEntity
+
+	"""
+	Admin Create body type
+	"""
+	adminCreateBodyType(input: AdminCreateBrandInput!): CarBodyTypeEntity
+
+	"""
+	Admin Create Brand
+	"""
+	adminCreateBrand(input: AdminCreateBrandNewInput!): CarBrandEntity
+
+	"""
+	admin create car buying need
+	"""
+	adminCreateCarBuyingNeed(input: AdminCreateCarBuyingNeedInput!): CarBuyingNeedEntity
+
+	"""
+	Create car purchase cost province
+	"""
+	adminCreateCarPurchaseCostProvince(input: AdminCreateCarPurchaseCostProvinceInput!): CarPurchaseCostProvinceEntity
+
+	"""
+	Create car purchase cost province setting option
+	"""
+	adminCreateCarPurchaseCostProvinceSettingOption(
+		input: AdminCreateCarPurchaseCostProvinceInput!
+	): CarPurchaseCostProvinceEntity
+
+	"""
+	Admin Create Colous
+	"""
+	adminCreateColous(input: AdminCreateBrandInput!): CarColourEntity
+
+	"""
+	Admin Create door
+	"""
+	adminCreateDoors(input: AdminCreateSeatInput!): CarDoorEntity
+
+	"""
+	Admin Create driver type
+	"""
+	adminCreateDriverType(input: AdminCreateDriverType!): CarDriverTypeEntity
+
+	"""
+	Admin Create fule economy
+	"""
+	adminCreateFuelEconomy(input: AdminCreateFuelEconomy!): CarFuelEconomyEntity
+
+	"""
+	Admin Create door
+	"""
+	adminCreateFuelType(input: AdminCreateBrandInput!): CarFuelTypeEntity
+
+	"""
+	create post
+	"""
+	adminCreateGarage(input: AdminNewGarageInput!): GarageEntity
+
+	"""
+	Admin Create Model
+	"""
+	adminCreateModel(input: AdminCreateModelnput!): CarModelEntity
+
+	"""
+	Admin Create multi Version
+	"""
+	adminCreateMultiVersion(input: AdminCreateMultiVersionInput!): [CarVersionEntity!]
+
+	"""
+	create post
+	"""
+	adminCreateParking(input: AdminNewParkingInput!): ParkingEntity
+
+	"""
+	Admin Create PaymentItems
+	"""
+	adminCreatePaymentItems(input: AdminCreatePaymentItemInput!): PaymentItemEntity
+
+	"""
+	admin create post
+	"""
+	adminCreatePost(input: AdminNewPostInput!): PostEntity
+	adminCreateQuestion(input: AdminCreateQuestionInput!): Boolean
+	adminCreateQuestionGroup(input: AdminCreateQuestionGroupInput!): Boolean
+	adminCreateQuestionSimulation(input: AdminCreateQuestionSimulationInput!): QuestionSimulationEntity
+	adminCreateQuestionSimulationGroup(input: AdminCreateQuestionSimulationGroupInput!): QuestionSimulationGroupEntity
+
+	"""
+	Admin Create seats
+	"""
+	adminCreateSeats(input: AdminCreateSeatInput!): CarSeatEntity
+
+	"""
+	Admin Create Version
+	"""
+	adminCreateVersion(input: AdminCreateVersionInput!): CarVersionEntity
+
+	"""
+	Admin Create Year
+	"""
+	adminCreateYear(input: AdminCreateBrandInput!): CarYearEntity
+
+	"""
+	get list banner position
+	"""
+	adminDeleteBanner(input: BannerDetailInput!): Boolean
+
+	"""
+	admin delete car buying need
+	"""
+	adminDeleteCarBuyingNeed(id: String!): Boolean
+
+	"""
+	delete car purchase cost province
+	"""
+	adminDeleteCarPurchaseCostProvince(id: String!): Boolean
+
+	"""
+	create post
+	"""
+	adminDeleteGarage(input: DetailInput!): Boolean
+
+	"""
+	Admin Update Status Options
+	"""
+	adminDeleteOptions(input: AdminDeleteOptionsInput!): Boolean
+
+	"""
+	create post
+	"""
+	adminDeleteParking(input: DetailInput!): Boolean
+
+	"""
+	admin delete post
+	"""
+	adminDeletePost(id: String!): PostEntity
+	adminDeleteQuestion(input: DetailInput!): Boolean
+
+	"""
+	admin delete question simulation
+	"""
+	adminDeleteQuestionSimulation(id: String!): Boolean
+
+	"""
+	admin Delete Question Simulation Group
+	"""
+	adminDeleteQuestionSimulationGroup(id: String!): Boolean
+
+	"""
+	Get review detail
+	"""
+	adminDeleteReview(id: String!): Boolean
+
+	"""
+	Admin Update Status Top Search Brand
+	"""
+	adminDeleteVersion(id: String!): Boolean
+
+	"""
+	create banner for admin
+	"""
+	adminEditBanner(input: AdminEditBannerInput!): BannerGroupEntity
+
+	"""
+	Admin Edit body type
+	"""
+	adminEditBodyType(input: AdminEditBrandInput!): CarBodyTypeEntity
+
+	"""
+	Admin Edit Brand
+	"""
+	adminEditBrand(input: AdminEditBrandNewInput!): CarBrandEntity
+
+	"""
+	admin edit car buying need
+	"""
+	adminEditCarBuyingNeed(input: AdminEditCarBuyingNeedInput!): CarBuyingNeedEntity
+
+	"""
+	Create car purchase cost province
+	"""
+	adminEditCarPurchaseCostProvince(input: AdminEditCarPurchaseCostProvinceInput!): CarPurchaseCostProvinceEntity
+
+	"""
+	Create car purchase cost province setting option
+	"""
+	adminEditCarPurchaseCostProvinceSettingOption(
+		input: AdminEditCarPurchaseCostProvinceInput!
+	): CarPurchaseCostProvinceEntity
+
+	"""
+	Admin Edit Colous
+	"""
+	adminEditColous(input: AdminEditBrandInput!): CarColourEntity
+
+	"""
+	Admin Edit door
+	"""
+	adminEditDoors(input: AdminEditSeatInput!): CarDoorEntity
+
+	"""
+	Admin Edit driver type
+	"""
+	adminEditDriverType(input: AdminEditDriverType!): CarDriverTypeEntity
+
+	"""
+	Admin Edit fule economy
+	"""
+	adminEditFuelEconomy(input: AdminEditFuelEconomy!): CarFuelEconomyEntity
+
+	"""
+	Admin Edit door
+	"""
+	adminEditFuelType(input: AdminEditBrandInput!): CarFuelTypeEntity
+
+	"""
+	create post
+	"""
+	adminEditGarage(input: AdminEditGarageInput!): GarageEntity
+
+	"""
+	Admin Edit Model
+	"""
+	adminEditModel(input: AdminEditModelnput!): CarModelEntity
+
+	"""
+	Admin Edit multi Version
+	"""
+	adminEditMultiVersion(input: AdminEditMultiVersionInput!): [CarVersionEntity!]
+
+	"""
+	create post
+	"""
+	adminEditParking(input: AdminEditParkingInput!): ParkingEntity
+
+	"""
+	Admin Edit PaymentItems
+	"""
+	adminEditPaymentItems(input: AdminEditPaymentItemInput!): PaymentItemEntity
+
+	"""
+	admin edit post
+	"""
+	adminEditPost(input: AdminEditPostInput!): PostEntity
+	adminEditQuestion(input: AdminEditQuestionInput!): Boolean
+	adminEditQuestionGroup(input: AdminEditQuestionGroupInput!): Boolean
+	adminEditQuestionSimulation(input: AdminEditQuestionSimulationInput!): QuestionSimulationEntity
+	adminEditQuestionSimulationGroup(input: AdminEditQuestionSimulationGroupInput!): QuestionSimulationGroupEntity
+
+	"""
+	Admin Edit seats
+	"""
+	adminEditSeats(input: AdminEditSeatInput!): CarSeatEntity
+
+	"""
+	Admin Edit Version
+	"""
+	adminEditVersion(input: AdminEditVersionInput!): CarVersionEntity
+	adminForgotPassword(email: String!): Boolean!
+	adminLogin(input: AdminLoginInput!): AdminAuthConnection!
+
+	"""
+	create post
+	"""
+	adminRejectPostActive(input: AdminUpdateStatusInput!): PostEntity
+
+	"""
+	admin send notification to user
+	"""
+	adminSendEmail(input: AdminSendNotificationInput!): Boolean
+	adminSendNotification(input: AdminSendNotificationInput!): Boolean!
+
+	"""
+	admin add balance
+	"""
+	adminUpdateBalance(input: AdminUpdateBalance!): UserBalanceEntity!
+
+	"""
+	create banner
+	"""
+	adminUpdateStatusBanner(input: AdminUpdateStatusBannerInput!): BannerGroupEntity
+
+	"""
+	create post
+	"""
+	adminUpdateStatusGarage(input: AdminUpdateStatusGarageInput!): GarageEntity
+
+	"""
+	Admin Update Status Options
+	"""
+	adminUpdateStatusOptions(input: AdminUpdateStatusOptionsInput!): Boolean
+
+	"""
+	create post
+	"""
+	adminUpdateStatusParking(input: AdminUpdateStatusGarageInput!): ParkingEntity
+
+	"""
+	Get list payment item
+	"""
+	adminUpdateStatusPayment(input: AdminUpdateStatusPlanInput!): PaymentItemEntity
+
+	"""
+	Get list plan listing
+	"""
+	adminUpdateStatusPlan(input: AdminUpdateStatusPlanInput!): PlanEntity
+
+	"""
+	admin approve post
+	"""
+	adminUpdateStatusPost(input: AdminUpdateStatusInput!): PostEntity
+
+	"""
+	Admin Update Status Top Search Brand
+	"""
+	adminUpdateStatusTopSearchBrand(input: AdminUpdateStatusTopSearchBrandInput!): Boolean
+	adminUpdateUser(input: AdminUpdateUserInput!): UserEntity!
+	adminUpdateUserAvatar(input: AdminUpdateUserAvatarInput!): UserEntity!
+
+	"""
+	admin approve post
+	"""
+	adminUpdateUserTransferRequest(input: AdminUpdateTransferRequestInput!): Boolean
+	adminVerifyForgot(input: AdminVerifyForgotInput!): Boolean!
+	changePassword(input: UserChangePasswordInput!): Boolean!
+
+	"""
+	Check email exist
+	"""
+	checkEmailExist(input: CheckEmailInput!): Boolean!
+
+	"""
+	Check phone exist
+	"""
+	checkPhoneExist(input: CheckPhoneInput!): Boolean!
+
+	"""
+	Check Referral Code exist
+	"""
+	checkReferralCodeExist(input: CheckReferralCodeInput!): Boolean!
+	checkRoom(input: CheckRoomInput!): Room
+	checkUserId(input: CheckUserIdInput!): Boolean!
+	createAdmin(input: NewAdminUserInput!): AdminUser!
+
+	"""
+	Create car buying needs
+	"""
+	createCarBuyingNeed(input: CreateCarBuyingNeedInput!): CarBuyingNeedEntity
+
+	"""
+	create post
+	"""
+	createCenterDriverLisense(input: NewCenterDriverLisenseInput!): CenterDriverLicenseEntity
+
+	"""
+	Create customer car buying needs
+	"""
+	createCustomerCarBuyingNeed(input: CreateCarBuyingNeedInput!): CarBuyingNeedEntity
+
+	"""
+	create post
+	"""
+	createGarage(input: NewGarageInput!): GarageEntity
+
+	"""
+	user create logs common
+	"""
+	createLogsCommon(input: UserCreateLogsCommonInput!): Boolean
+	createMediaWithPath(input: CreateMediaWithPathInput!): Media!
+
+	"""
+	create post
+	"""
+	createParking(input: NewParkingInput!): ParkingEntity
+
+	"""
+	create post
+	"""
+	createPost(input: NewPostInput!): PostEntity
+
+	"""
+	Create rating
+	"""
+	createRating(input: CreateRatingInput!): Boolean
+
+	"""
+	create post
+	"""
+	createRatingCenterDriverLisense(input: CreateRatingCenterDriverLisenseInput!): Boolean
+
+	"""
+	create post
+	"""
+	createRatingGarage(input: CreateRatingGarageInput!): Boolean
+
+	"""
+	Create Reviews
+	"""
+	createReview(input: CreateReviewInput!): ReviewsEntity
+	createRoom(input: CreateRoomInput!): Room!
+
+	"""
+	delete car buying needs
+	"""
+	deleteCarBuyingNeed(id: String!): Boolean
+
+	"""
+	create post
+	"""
+	deleteCenterDriverLisense(input: DetailInput!): Boolean
+
+	"""
+	delete customer car buying needs
+	"""
+	deleteCustomerCarBuyingNeed(id: String!): Boolean
+
+	"""
+	create post
+	"""
+	deleteGarage(input: DetailInput!): Boolean
+
+	"""
+	create post
+	"""
+	deleteParking(input: DetailInput!): Boolean
+
+	"""
+	Edit car buying needs
+	"""
+	editCarBuyingNeed(input: EditCarBuyingNeedInput!): CarBuyingNeedEntity
+
+	"""
+	create post
+	"""
+	editCenterDriverLisense(input: EditCenterDriverLisenseInput!): CenterDriverLicenseEntity
+
+	"""
+	Edit customer car buying needs
+	"""
+	editCustomerCarBuyingNeed(input: EditCarBuyingNeedInput!): CarBuyingNeedEntity
+
+	"""
+	create post
+	"""
+	editGarage(input: EditGarageInput!): GarageEntity
+
+	"""
+	create post
+	"""
+	editParking(input: EditParkingInput!): ParkingEntity
+
+	"""
+	create post
+	"""
+	editPost(input: EditPostInput!): PostEntity
+
+	"""
+	Create Reviews
+	"""
+	editReview(input: EditReviewInput!): ReviewsEntity
+	forgotPassword(input: UserForgotPasswordInput!): CheckUserForgotPassword!
+	getUserBalance: UserBalanceEntity!
+
+	"""
+	like post
+	"""
+	likePost(input: LikeInput!): Boolean
+	login(input: AppLoginInput!): AuthConnection!
+	loginSNS(input: SocialLoginInput!): AuthConnection!
+	logout(input: LogoutUserInput!): Boolean!
+	refreshToken(refreshToken: String!): AuthConnection!
+
+	"""
+	Register user for app
+	"""
+	register(input: NewUserInput!, otpCode: String!): UserEntity!
+
+	"""
+	create post report
+	"""
+	reportPost(input: PostReportInput!): PostReportEntity
+
+	"""
+	create post report
+	"""
+	reportUser(input: UserReportInput!): UserReportEntity
+	requestBankTransfer(input: UserRequestBankTransferInput!): UserRequestBankTransferEntity!
+	seenMessages(input: SeenMessagesInput!): Boolean!
+	sendMessage(input: NewMessagesInput!): Message!
+	sendOTP(input: SendOtpInput!): Boolean!
+	sendOtpActiveEmail(input: UserActiveEmailInput!): Boolean!
+	signOut(input: AppSignOutInput!): Boolean!
+	test: String!
+
+	"""
+	like post
+	"""
+	testSlug: Boolean
+	testUser: Boolean!
+	updateNotification(input: UserUpdateNotificationInput!): UserEntity!
+
+	"""
+	update Status Buying Demand
+	"""
+	updateStatusBuyingDemand(input: EditStatusBuyingDemandInput!): CarBuyingNeedEntity
+
+	"""
+	update Status Car Buying Need
+	"""
+	updateStatusCarBuyingNeed(input: EditStatusCarBuyingNeedEnumInput!): CarBuyingNeedEntity
+	updateStoreName(input: UserUpdateStoreNameInput!): UserEntity!
+	updateUser(input: UpdateUserInput!): UserEntity!
+	updateUserAvatar(input: UpdateUserAvatarInput!): UserEntity!
+	userBlockPost(input: UserBlockInput!): Boolean!
+	userBlockUser(input: UserBlockInput!): Boolean!
+	userDeleteAllNotification: Boolean!
+	userDeleteNotification(input: DetailInput!): Boolean!
+	userReadAllNotification: Boolean!
+	userReadNotification(input: DetailInput!): Boolean!
+	userSubmitAnswerHaySai(input: SubmitQuestionAnwserHaySaiInput!): Boolean
+	userSubmitGroupAnswer(input: SubmitQuestionGroupAnwserInput!): Boolean
+	userSubmitGroupAnswerSimulation(input: SubmitQuestionGroupAnwserSimulationInput!): Boolean
+	userSubmitGroupAnswerSimulationOneRow(input: SubmitQuestionGroupAnwserSimulationOneRowInput!): Boolean
+	userUpdateLanguage(input: UserUpdateLanguageInput!): Boolean!
+	userWithdrawAccount(input: UserWithDrawInput!): Boolean!
+	verifyActivePhone(input: UserVerifyActivePhoneInput!): UserEntity!
+	verifyForgotPasswordEmail(input: UserVerifyForgotPasswordEmailInput!): Boolean!
+	verifyForgotPasswordPhone(input: UserVerifyForgotPasswordPhoneInput!): Boolean!
+	verifyOTP(input: VerifyOtpInput!): Boolean!
+}
+
+input NewAdminUserInput {
+	age: Int
+	firstName: String
+	lastName: String
+	password: String
+	username: String!
+}
+
+input NewCenterDriverLisenseInput {
+	address: String!
+	city: String
+	description: String!
+	district: String!
+	email: String
+	medias: [String!]!
+	phone: String
+	province: String!
+	title: String!
+	ward: String!
+	website: String
+}
+
+input NewGarageInput {
+	address: String!
+	city: String
+	description: String!
+	district: String
+	email: String
+	latitude: Float!
+	longitude: Float!
+	medias: [String!]!
+	phone: String!
+	province: String
+	services: [GarageServicesTypeEnum!]!
+	title: String!
+	ward: String
+	website: String
+}
+
+input NewMessagesInput {
+	content: String
+	mediaId: String
+	parentId: String
+	postId: String
+	roomId: String!
+	type: MessageTypeEnum!
+}
+
+input NewParkingInput {
+	address: String!
+	closeOnPublicHolidays: Boolean!
+	description: String!
+	email: String
+	latitude: Float!
+	longitude: Float!
+	medias: [String!]!
+	phone: String!
+	priceProperties: [NewParkingWokingPricePropertiesInput!]!
+	sameWeekOfOperation: Boolean!
+	title: String!
+	total: Float!
+	website: String
+	workingTimes: [NewParkingWokingTimeInput!]!
+}
+
+input NewParkingWokingPricePropertiesInput {
+	price: Float!
+	type: ParkingPricePropertiesEnum!
+}
+
+input NewParkingWokingTimeInput {
+	day: DayEnum!
+	endTime: String!
+	startTime: String!
+}
+
+input NewPostDescriptionInput {
+	description: String
+	inspection: CarInspectionEnum
+	offer: [CarOfferEnum!]
+	remoteAssessment: CarRemoteAssessmentEnum
+	roadworthyCeftificate: CarRemoteAssessmentEnum
+}
+
+input NewPostEngineInput {
+	driverType: String
+	fuelType: String
+	fuleEconomy: String
+}
+
+input NewPostInput {
+	descriptionMeta: NewPostDescriptionInput!
+	engine: NewPostEngineInput
+	medias: [String!]
+	mediasHidePlate: [String!]
+	meta: NewPostMetaInput!
+	plan: NewPostPlanInput!
+	plateHidden: Boolean
+	publishType: NewPostPublishTypeInput!
+	styleMeta: NewPostStyleInput
+	title: String
+	videoUrl: String
+}
+
+input NewPostMetaInput {
+	brand: String
+	cityId: String
+	condition: CarConditionEnum
+	countryCode: String
+	currency: PaymentItemCurrencyEnum
+	hiddenPrice: String
+	includeTax: Boolean
+	model: String
+	odometer: Float
+	price: Float
+	regExprice: String
+	regPlate: String
+	showHiddenPrice: Boolean = false
+	transmission: CarTransmissionEnum
+	year: String
+}
+
+input NewPostPlanInput {
+	planId: String!
+}
+
+input NewPostPublishTypeInput {
+	isPublish: Boolean!
+	step: Float
+}
+
+input NewPostStyleInput {
+	bodyType: String
+	colour: String
+	doors: String
+	seats: String
+}
+
+input NewUserInput {
+	cityId: String!
+	countryCode: String!
+	email: String!
+	firstName: String!
+	inviteCode: String
+	lastName: String!
+	password: String!
+	phone: String!
+	prefixPhone: String!
+}
+
+"""
+Node
+"""
+interface Node {
+	id: ID!
+}
+
+"""
+List notification
+"""
+type NotificationConnection implements Connection {
+	items: [NotificationEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+type NotificationEntity implements Node {
+	adminNotificationId: String
+	content: String!
+	contentEn: String
+	createdAt: DateTime!
+	id: ID!
+	isDeleted: Boolean!
+	isRead: Boolean!
+	reportId: String
+	screenType: AdminNotificationScreenTypeEnum
+	tagetId: String
+	title: String!
+	titleEn: String
+	type: NotificationTypeEnum!
+	userId: String!
+}
+
+enum NotificationTypeEnum {
+	ADMIN_SEND
+	APPROVED_GARAGE
+	APPROVED_PARKING
+	APPROVED_TRANSFER_REQUEST
+	EMAIL_NOTIFICATION
+	EMAIL_PROMOTION_NOTIFICATION
+	NEW_MESSAGE
+	NEW_PROMOTION
+	NEW_REVIEWS
+	POST_EXPIRED
+	POST_REJECT
+	POST_SUSPENDED
+	POST_UPDATE
+	PUSH_NOTIFICATION
+	PUSH_PROMOTION_NOTIFICATION
+	REJECTED_GARAGE
+	REJECTED_PARKING
+	REJECTED_TRANSFER_REQUEST
+	REPORTED_POST
+	SMS
+}
+
+type PaginationLinks {
+	first: String
+	last: String
+	next: String
+	previous: String
+}
+
+type PaginationMeta {
+	currentPage: Int!
+	itemCount: Int!
+	itemsPerPage: Int!
+	next: String
+	previous: String
+	totalItems: Int!
+	totalPages: Int!
+}
+
+input PagingCarBuyingNeedInput {
+	keyword: String
+	skip: Float
+	take: Float
+}
+
+input PagingCarPurchaseCostProvinceInput {
+	keyword: String
+	skip: Float
+	take: Float
+}
+
+input PagingCarVersionInput {
+	keyword: String
+	skip: Float
+	take: Float
+}
+
+input PagingCommonInput {
+	createFrom: String
+	createTo: String
+	keyword: String
+	skip: Float
+	take: Float
+}
+
+input PagingReviewsInput {
+	category: String
+	ignoreId: [String!]
+	keyword: String
+	skip: Float
+	sort: ReviewSortEnum
+	take: Float
+}
+
+"""
+List parking
+"""
+type ParkingConnection implements Connection {
+	items: [ParkingEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+type ParkingEntity implements Node {
+	address: String
+	closeOnPublicHolidays: Boolean!
+	createdAt: DateTime!
+	description: String!
+	distance: Float
+	district: String
+	districtDetail: DistrictsEntity
+	email: String
+	id: ID!
+	isActive: Boolean!
+	latitude: Float
+	location: GeoJSONPoint
+	longitude: Float
+	mediaIds: [String!]!
+	medias: [ParkingMediasEntity!]
+	phone: String!
+	priceProperties: [ParkingPricePropertiesEntity!]
+	province: String
+	provinceDetail: ProviceEntity
+	reason: String
+	sameWeekOfOperation: Boolean!
+	slug: String!
+	status: StatusCommonEnum!
+	title: String!
+	total: Float!
+	updatedAt: DateTime!
+	user: UserEntity
+	userId: String
+	ward: String
+	wardDetail: WardsEntity
+	website: String
+	workingTimes: [ParkingTimeEntity!]
+}
+
+type ParkingMediasEntity implements Node {
+	createdAt: DateTime!
+	id: ID!
+	mediaDetail: Media
+	mediaId: String!
+	parkingId: String!
+	updatedAt: DateTime!
+}
+
+type ParkingPricePropertiesEntity implements Node {
+	createdAt: DateTime!
+	id: ID!
+	parkingId: String!
+	price: Float!
+	type: ParkingPricePropertiesEnum!
+	updatedAt: DateTime!
+}
+
+enum ParkingPricePropertiesEnum {
+	BELLOW_EIGHT_HOUR
+	BELLOW_FOUR_HOUR
+	DAYS
+	MONTHS
+	WEEKS
+	YEARS
+}
+
+type ParkingTimeEntity implements Node {
+	createdAt: DateTime!
+	day: DayEnum!
+	endTime: String!
+	id: ID!
+	parkingId: String!
+	startTime: String!
+	updatedAt: DateTime!
+}
+
+enum PaymentFormEnum {
+	DEBT_BALANCE_DECREASES
+	DEBT_PAY_EVENLY
+}
+
+enum PaymentItemCurrencyEnum {
+	USD
+	VND
+}
+
+type PaymentItemEntity implements Node {
+	amount: Float!
+	currency: PaymentItemCurrencyEnum!
+	id: ID!
+	isActive: Boolean!
+}
+
+type PlanEntity implements Node {
+	allowKar: Boolean!
+	autoRenew: Boolean!
+	createdAt: DateTime!
+	duration: Float!
+	id: ID!
+	isActive: Boolean!
+	manualRenew: Boolean!
+	name: String!
+	priceEn: Float!
+	priceKar: Float
+	priceVi: Float!
+	showOnLatestListing: Boolean!
+	showOnMainListing: Boolean!
+	standardListing: Boolean!
+	type: PlanTypeEnum!
+	unit: PlanUnitTypeEnum!
+	updatedAt: DateTime!
+}
+
+enum PlanTypeEnum {
+	KAR_ONE_YEAR
+	KAR_SUPPER
+	SAVING
+	STANDARD
+}
+
+enum PlanUnitTypeEnum {
+	DAY
+	HOUR
+	YEAR
+}
+
+"""
+List post
+"""
+type PostConnection implements Connection {
+	items: [PostEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+input PostDetailInput {
+	id: String
+	slug: String
+}
+
+type PostEntity implements Node {
+	bannerGroup: BannerGroupEntity
+	bannerPositionId: String
+	bodyType: CarBodyTypeEntity
+	brand: CarBrandEntity
+	city: ProviceEntity
+	cityId: String
+	colour: CarColourEntity
+	condition: CarConditionEnum
+	countryCode: String
+	createdAt: DateTime!
+	currency: PaymentItemCurrencyEnum
+	description: String
+	door: String
+	driverType: CarDriverTypeEntity
+	fuelEconomy: CarFuelEconomyEntity
+	fuelType: CarFuelTypeEntity
+	hiddenPrice: String
+	hidePlateMedias: [PostMediasEntity!]
+	id: ID!
+	includeTax: Boolean!
+	inspection: CarInspectionEnum
+	isReport: Boolean
+	isSaved: Boolean
+	medias: [PostMediasEntity!]
+	model: CarModelEntity
+	odometer: Float
+	offer: [CarOfferEnum!]
+	planExpried: DateTime
+	planId: String
+	plateHidden: Boolean!
+	price: Float
+	regExprice: String
+	regPlate: String
+	remoteAssessment: CarRemoteAssessmentEnum
+	roadworthyCeftificate: CarRemoteAssessmentEnum
+	seat: String
+	showHiddenPrice: Boolean!
+	slug: String
+	status: PostStatusEnum!
+	statusReasonRejected: PostStatusLogsEntity
+	stepDraft: Float
+	title: String
+	totalView: Float
+	transmission: CarTransmissionEnum
+	updatedAt: DateTime!
+	user: UserEntity
+	userId: String!
+	videoUrl: String
+	year: Float
+}
+
+type PostMediasEntity implements Node {
+	createdAt: DateTime!
+	id: ID!
+	isFeatured: Boolean!
+	isHidePlate: Boolean!
+	mediaDetail: Media
+	mediaId: String!
+	postId: String!
+	updatedAt: DateTime!
+}
+
+enum PostMetaTypeEnum {
+	BODY_TYPE
+	BRAND
+	COLOUR
+	CONDITION
+	DOOR
+	DRIVER_TYPE
+	FUEL_ECONOMY
+	FUEL_TYPE
+	INSPECTION
+	MODEL
+	PAYMENT_ITEM
+	PURCHASE_COST_PROVINCE
+	SEAT
+	TRANSMISSION
+	VERSION
+	YEAR
+}
+
+"""
+List report post
+"""
+type PostReportConnection implements Connection {
+	items: [PostReportEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+type PostReportEntity implements Node {
+	content: String
+	createdAt: DateTime!
+	id: ID!
+	postId: String!
+	reason: String
+	type: PostReportType!
+	updatedAt: DateTime!
+	user: UserEntity
+	userId: String!
+}
+
+input PostReportInput {
+	content: String
+	postId: String!
+	reason: String
+	reportType: PostReportType!
+}
+
+"""
+PostReportType
+"""
+enum PostReportType {
+	CAR_STOLEN
+	FRAUD
+	INCORRECT_INFORMATION
+	INVALID_SELLER
+	OBJECTIONABLE_CONTENT
+	OTHERS
+}
+
+"""
+PostSortType
+"""
+enum PostSortType {
+	FEATURED
+	KM_HIGH_TO_LOW
+	KM_LOW_TO_HIGH
+	PRICE_HIGH_TO_LOW
+	PRICE_LOW_TO_HIGH
+	TOTAL_VIEW
+	YEAR_HIGH_TO_LOW
+	YEAR_LOW_TO_HIGH
+}
+
+enum PostStatusEnum {
+	ACTIVE
+	DETELED
+	DRAFT
+	EDIT_PENDING
+	EXPIRED
+	INSUFFICIENT_FUND
+	INSUFFICIENT_FUND_RENEW
+	PENDING
+	REJECTED
+	SOLD
+	SUSPENDED
+}
+
+type PostStatusLogsEntity implements Node {
+	createdAt: DateTime!
+	id: ID!
+	note: String
+	planId: String
+	postId: String
+	remainingPlanDay: Float
+	remainingPlanMinutes: Float
+	remainingPlanUnit: PlanUnitTypeEnum
+	status: PostStatusEnum!
+	updatedAt: DateTime!
+	updatedById: String
+}
+
+"""
+List Province
+"""
+type ProviceConnection implements Connection {
+	items: [ProviceEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+type ProviceEntity implements Node {
+	code: Float!
+	countryCode: String!
+	id: ID!
+	isActive: Boolean!
+	name: String!
+	slug: String
+}
+
+type Query {
+	"""
+	detail
+	"""
+	adminCenterDriverLisensePagination(input: ListCenterDriverLisenseInput!): CenterDriverLicenseConnection
+
+	"""
+	adminDashboardListingByStatusz
+	"""
+	adminDashboardActiveListingAndActiveUser: RevenuePerUserType
+
+	"""
+	adminDashboardListingByStatusz
+	"""
+	adminDashboardListingByStatus: [CountPostByStatus!]
+
+	"""
+	adminDashboardListingByStatusz
+	"""
+	adminDashboardRevenuePerUser: RevenuePerUserType
+
+	"""
+	adminDashboardListingByStatusz
+	"""
+	adminDashboardRevenuePerUserActive: RevenuePerUserType
+
+	"""
+	adminDashboardRevenueTotal
+	"""
+	adminDashboardRevenueTotal(input: AdminDashboardTotalInput!): [UserTotalNoByTime!]
+
+	"""
+	adminDashboardTotalRevenue
+	"""
+	adminDashboardTotalRevenue: [UserTotalRevenue!]
+
+	"""
+	adminDashboardListingByStatusz
+	"""
+	adminDashboardUserByLocation: [UserCountByLocation!]
+
+	"""
+	adminDashboardListingByStatusz
+	"""
+	adminDashboardUserGrowthRate: RevenuePerUserType
+
+	"""
+	adminDashboardUserStatusActive
+	"""
+	adminDashboardUserStatusActive: UserStatusCount
+
+	"""
+	adminDashboardUserTotal
+	"""
+	adminDashboardUserTotal(input: AdminDashboardTotalInput!): [UserTotalNoByTime!]
+
+	"""
+	detail
+	"""
+	adminGaragePagination(input: ListGarageInput!): GarageConnection
+
+	"""
+	admin get list detail car buying needs
+	"""
+	adminGetCarBuyingNeedDetail(id: String!): CarBuyingNeedEntity
+
+	"""
+	admin get list customer detail car buying needs
+	"""
+	adminGetCustomerCarBuyingNeedDetail(id: String!): CarBuyingNeedEntity
+
+	"""
+	get detail post report by Id
+	"""
+	adminGetDetailReportPost(id: String!): PostReportEntity
+
+	"""
+	get list car version
+	"""
+	adminGetListAllVersion(input: PagingCarVersionInput!): CarVersionConnection
+
+	"""
+	Get list car body type
+	"""
+	adminGetListBodyTypes: [CarBodyTypeEntity!]
+
+	"""
+	Get list car make brand
+	"""
+	adminGetListBrands: [CarBrandEntity!]
+
+	"""
+	get car purchase cost province detail
+	"""
+	adminGetListCarPurchaseCostProvinceDetail(id: String!): CarPurchaseCostProvinceEntity
+
+	"""
+	get list car purchase cost province
+	"""
+	adminGetListCarPurchaseCostProvinces(input: PagingCarPurchaseCostProvinceInput!): CarPurchaseCostProvinceConnection
+
+	"""
+	Get list car version
+	"""
+	adminGetListCarPurchaseCostProvinceSettingOption: [CarPurchaseCostProvinceEntity!]
+
+	"""
+	Get list car color
+	"""
+	adminGetListColous: [CarColourEntity!]
+
+	"""
+	admin get list customer car buying needs by userId
+	"""
+	adminGetListCustomerCarBuyingNeedByUserId(input: PagingCarBuyingNeedInput!): CarBuyingNeedConnection
+
+	"""
+	Get list car door
+	"""
+	adminGetListDoors: [CarDoorEntity!]
+
+	"""
+	Get list car driver type
+	"""
+	adminGetListDriverType: [CarDriverTypeEntity!]
+
+	"""
+	Get list car fuel economy
+	"""
+	adminGetListFuelEconomy: [CarFuelEconomyEntity!]
+
+	"""
+	Get list car fuel type
+	"""
+	adminGetListFuelType: [CarFuelTypeEntity!]
+
+	"""
+	Get list car make brand
+	"""
+	adminGetListModels: [CarModelEntity!]
+
+	"""
+	Get list plan listing
+	"""
+	adminGetListPlan: [PlanEntity!]
+
+	"""
+	get list post report
+	"""
+	adminGetListReportPost(input: PagingCommonInput!): PostReportConnection
+
+	"""
+	Get list Reviews for admin
+	"""
+	adminGetListReviews(input: PagingReviewsInput!): ReviewConnection
+
+	"""
+	Get list car seats
+	"""
+	adminGetListSeats: [CarSeatEntity!]
+
+	"""
+	Get list car version
+	"""
+	adminGetListVersion: [CarVersionEntity!]
+
+	"""
+	Get list car years
+	"""
+	adminGetListYears: [CarYearEntity!]
+
+	"""
+	Get max no question simulation
+	"""
+	adminGetMaxNoQuestionSimulation: Float!
+
+	"""
+	Get review detail
+	"""
+	adminGetReviewDetail(id: String!): ReviewsEntity
+
+	"""
+	Get list categories active
+	"""
+	adminGetReviewsCatetories: [ReviewCategoriesEntity!]
+	adminGetUserBalance(id: String!): UserBalanceEntity!
+
+	"""
+	get list car version details
+	"""
+	adminGetVersionDetail(id: String!): CarVersionEntity
+
+	"""
+	create banner
+	"""
+	adminListBanner(input: PagingCommonInput!): BannerGroupConnection
+
+	"""
+	get list banner position
+	"""
+	adminListBannerPosition: [BannerPositionEntity!]
+
+	"""
+	admin send notification to user
+	"""
+	adminListNotification(input: AdminNotificationPaginationInput!): AdminNotificationConnection
+
+	"""
+	admin approve post
+	"""
+	adminListPost(input: AdminListPostInput!): PostConnection
+	adminListQuestion(input: AdminListQuestionInput!): QuestionConnection
+	adminListQuestionGroup(input: AdminListQuestionGroupInput!): QuestionGroupConnection
+
+	"""
+	get list Question Simulation
+	"""
+	adminListQuestionSimulation(input: AdminListQuestionSimulationInput!): QuestionSimulationConnection!
+
+	"""
+	get list Question Simulation Group
+	"""
+	adminListQuestionSimulationGroup(input: AdminListQuestionSimulationGroupInput!): QuestionSimilationGroupConnection!
+
+	"""
+	admin approve post
+	"""
+	adminListUserTransferRequest(input: UserTransferRequestInput!): UserRequestTransferConnection
+
+	"""
+	admin get list car buying needs
+	"""
+	adminPaginationCarBuyingNeeds(input: PagingCarBuyingNeedInput!): CarBuyingNeedConnection
+
+	"""
+	detail
+	"""
+	adminParkingPagination(input: ListParkingInput!): ParkingConnection
+
+	"""
+	Get list payment item
+	"""
+	adminPaymentItems: [PaymentItemEntity!]
+
+	"""
+	Get post detail
+	"""
+	adminPostDetail(input: PostDetailInput!): PostEntity
+	adminQuestionDetail(input: DetailInput!): QuestionEntity
+	adminQuestionGroupDetail(input: DetailInput!): QuestionGroupEntity
+
+	"""
+	get detail Question Simulation
+	"""
+	adminQuestionSimulationDetail(input: DetailInput!): QuestionSimulationEntity!
+
+	"""
+	get list Question Simulation Group detail
+	"""
+	adminQuestionSimulationGroupDetail(input: DetailInput!): QuestionSimulationGroupEntity!
+
+	"""
+	calculating installment car Loan
+	"""
+	calculatingInstallmentCarLoan(input: CalculatingInstallmentCarLoanInput!): CarPurchaseCostEstimateMaster
+
+	"""
+	detail
+	"""
+	centerDriverLisenseDetail(input: DetailInput!): CenterDriverLicenseEntity
+
+	"""
+	detail
+	"""
+	centerDriverLisensePagination(input: ListCenterDriverLisenseInput!): CenterDriverLicenseConnection
+
+	"""
+	detail
+	"""
+	centerDriverLisenseRatingPagination(input: ListCenterDriverLisenseRatingInput!): CenterDriverLicenseRatingConnection
+
+	"""
+	Check post has approved
+	"""
+	checkPostHaveApproved(input: PostDetailInput!): Boolean
+
+	"""
+	Get post detail
+	"""
+	countPostActive: Float
+
+	"""
+	Get list contries
+	"""
+	countries(input: PagingCommonInput!): CountriesConnection
+
+	"""
+	Get list province by country
+	"""
+	districts(input: DistrictsPagingInput!): DistrictsConnection
+
+	"""
+	detail
+	"""
+	garageDetail(input: DetailInput!): GarageEntity
+
+	"""
+	detail
+	"""
+	garagePagination(input: ListGarageInput!): GarageConnection
+
+	"""
+	detail
+	"""
+	garageRatingPagination(input: ListGarageRatingInput!): GarageRatingConnection
+
+	"""
+	Get banner
+	"""
+	getBanner: BannerEntity
+
+	"""
+	get list banner position
+	"""
+	getBannerDetail(input: BannerDetailInput!): BannerGroupEntity
+
+	"""
+	get list detail car buying needs
+	"""
+	getCarBuyingNeedDetail(id: String!): CarBuyingNeedEntity
+
+	"""
+	Get list car version
+	"""
+	getCarPurchaseCostProvinceById(provinceId: String!): [CarPurchaseCostProvinceEntity!]
+
+	"""
+	get category services list
+	"""
+	getCategoryServices: [CategoryServicesEntity!]!
+
+	"""
+	Get count by options
+	"""
+	getCountPostByOptionType(input: GetCountPostByTypeInput!): CountPostWithOptionsType
+
+	"""
+	get list customer detail car buying needs
+	"""
+	getCustomerCarBuyingNeedDetail(id: String!): CarBuyingNeedEntity
+
+	"""
+	get detail transfer request
+	"""
+	getDetailUserTransferRequest(id: String!): UserRequestBankTransferEntity
+
+	"""
+	Get banner
+	"""
+	getListBank: [BanksEntity!]
+
+	"""
+	Get list car body type
+	"""
+	getListBodyTypes: [CarBodyTypeEntity!]
+
+	"""
+	Get list car make brand
+	"""
+	getListBrands: [CarBrandEntity!]
+
+	"""
+	Get list car make brand by condition
+	"""
+	getListBrandsByCondition(input: CarBrandListInput!): [CarBrandEntity!]
+
+	"""
+	get list car buying needs by userId
+	"""
+	getListCarBuyingNeedByUserId(input: PagingCarBuyingNeedInput!): CarBuyingNeedConnection
+
+	"""
+	get list car buying needs
+	"""
+	getListCarBuyingNeeds(input: PagingCarBuyingNeedInput!): CarBuyingNeedConnection
+
+	"""
+	Get list car version
+	"""
+	getListCarPurchaseCostProvince: [CarPurchaseCostProvinceEntity!]
+
+	"""
+	Get list car color
+	"""
+	getListColous: [CarColourEntity!]
+
+	"""
+	get list customer car buying needs by userId
+	"""
+	getListCustomerCarBuyingNeedByUserId(input: PagingCarBuyingNeedInput!): CarBuyingNeedConnection
+
+	"""
+	Get list car door
+	"""
+	getListDoors: [CarDoorEntity!]
+
+	"""
+	Get list car driver type
+	"""
+	getListDriverType: [CarDriverTypeEntity!]
+
+	"""
+	Get list car fuel economy
+	"""
+	getListFuelEconomy: [CarFuelEconomyEntity!]
+
+	"""
+	Get list car fuel type
+	"""
+	getListFuelType: [CarFuelTypeEntity!]
+
+	"""
+	Get list car make brand
+	"""
+	getListModels(input: CarModelListInput!): [CarModelEntity!]
+
+	"""
+	Get list plan listing
+	"""
+	getListPlan: [PlanEntity!]
+
+	"""
+	Get list post active for home
+	"""
+	getListPostActive(input: ListPostInput!): PostConnection
+
+	"""
+	Get list post save by user
+	"""
+	getListPostSaved(input: ListPostSavedInput!): PostConnection
+	getListQuestion: [QuestionEntity!]
+
+	"""
+	Get list câu hỏi theo chủ đề
+	"""
+	getListQuestionAnswerHistoryByGroup(input: UserListQuestionGroupByTypeInput!): [UserQuestionAnswerEntity!]
+
+	"""
+	Thi thử
+	"""
+	getListQuestionByGroup(input: DetailInput!): [QuestionEntity!]
+
+	"""
+	Get list câu hỏi theo chủ đề
+	"""
+	getListQuestionByType(input: QuestionGroupByTypeInput!): [QuestionEntity!]
+
+	"""
+	Get list câu hỏi theo chủ đề
+	"""
+	getListQuestionByTypeHaySai: QuestionAndAnswerHaySai
+
+	"""
+	get danh sách các bộ đề
+	"""
+	getListQuestionSimulationByGroup(input: ListQuestionSimulationGroupInput!): QuestionSimilationGroupConnection
+
+	"""
+	xem chi tiết bộ đề
+	"""
+	getListQuestionSimulationByGroupDetail(input: DetailInput!): [QuestionSimulationEntity!]
+
+	"""
+	Get list tình huống theo chương / câu hay sai
+	"""
+	getListQuestionSimulationByType(input: QuestionSimulationGroupByTypeInput!): [QuestionSimulationEntity!]
+
+	"""
+	Get list Reviews
+	"""
+	getListReviews(input: PagingReviewsInput!): ReviewConnection
+
+	"""
+	Get list car seats
+	"""
+	getListSeats: [CarSeatEntity!]
+
+	"""
+	Get list car vehicle line
+	"""
+	getListVersions(input: CarVersionListInput!): [CarVersionEntity!]
+
+	"""
+	Get list car years
+	"""
+	getListYears: [CarYearEntity!]
+
+	"""
+	Get Car Version Market Price
+	"""
+	getMarketPriceCarVersions(input: MarketPriceCarVersionInput!): CarVersionMarketPrice
+	getNumberKarInvitaion: Float!
+
+	"""
+	get category services list
+	"""
+	getNumberNotification: Float!
+
+	"""
+	Get post detail
+	"""
+	getPostDetail(input: PostDetailInput!): PostEntity
+	getQuestionGroupByType(input: QuestionGroupByTypeInput!): [QuestionGroupEntity!]
+
+	"""
+	Get list details rating
+	"""
+	getRatingBySeller(input: DetailCommonInput!): [RatingEntity!]
+
+	"""
+	Get list details rating
+	"""
+	getRatingByUserAndSeller(input: DetailCommonInput!): RatingEntity
+
+	"""
+	get rating center by user
+	"""
+	getRatingCenterDriverLisense(input: DetailInput!): CenterDriverLicenseRatingEntity
+
+	"""
+	Get details rating
+	"""
+	getRatingDetail(input: DetailRating!): RatingEntity
+
+	"""
+	get rating garage by user
+	"""
+	getRatingGarage(input: DetailInput!): GarageRatingEntity
+
+	"""
+	Get review detail
+	"""
+	getReviewDetail(slug: String!): ReviewsEntity
+
+	"""
+	Get list categories active
+	"""
+	getReviewsCatetories: [ReviewCategoriesEntity!]
+
+	"""
+	Get seller total
+	"""
+	getSellerTotal(input: DetailCommonInput!): SellerTotal
+	getTotalQuestionActive: Float
+	getTotalQuestionAndAnswer: [CountQuestionAndAnswer!]
+
+	"""
+	Get count tình huống theo chương / câu hay sai
+	"""
+	getTotalQuestionAndAnswerByType(input: QuestionSimulationGroupByTypeInput!): CountQuestionAndAnswerSimulation
+
+	"""
+	Get list post active for home
+	"""
+	getTotalViewByPost(input: DetailInput!): Float
+
+	"""
+	Get post draft
+	"""
+	getUserPostDraft: PostEntity
+
+	"""
+	get list post for user
+	"""
+	getUserPosts(input: UserListPostInput!): PostConnection
+	getUserPromotion(input: PagingCommonInput!): UserPromotionConnection!
+	getUsersByRating(input: UsersRatingInput!): UserConnection
+
+	"""
+	get list banner position
+	"""
+	listBannerByPosition(input: BannerPositionInput!): [BannerGroupEntity!]
+
+	"""
+	get list banner position
+	"""
+	listBannerPosition: [BannerPositionEntity!]
+
+	"""
+	Get current user authentication
+	"""
+	me: UserEntity!
+
+	"""
+	Get current admin user authentication
+	"""
+	meAdmin: AdminUser!
+	messages(input: GetMessagesInput!): MessageConnection!
+
+	"""
+	detail
+	"""
+	parkingDetail(input: DetailInput!): ParkingEntity
+
+	"""
+	detail
+	"""
+	parkingPagination(input: ListParkingInput!): ParkingConnection
+
+	"""
+	Get list payment item
+	"""
+	paymentItems: [PaymentItemEntity!]
+
+	"""
+	Get list province by country
+	"""
+	provinces(countryCode: String!, input: PagingCommonInput!): ProviceConnection
+
+	"""
+	create post report
+	"""
+	reportPostDetail(input: DetailInput!): PostReportEntity
+	rooms(input: GetRoomInput!): RoomConnection!
+
+	"""
+	Get list province by country
+	"""
+	seedProvines: ProviceConnection
+
+	"""
+	user update status post
+	"""
+	updatePostStatus(input: UserUpdateStatusInput!): PostEntity
+
+	"""
+	Get user info with id
+	"""
+	user(input: UserInput!): UserEntity
+
+	"""
+	create post
+	"""
+	userCheckHasGarage: Boolean
+
+	"""
+	create post
+	"""
+	userCheckHasParking: Boolean
+
+	"""
+	detail
+	"""
+	userGarageDetail: GarageEntity
+
+	"""
+	get category services list
+	"""
+	userListNotification(input: ListNotificationInput!): NotificationConnection!
+
+	"""
+	detail
+	"""
+	userParkingDetail: ParkingEntity
+	users(input: UsersInput!): UserConnection
+	userTransactions(input: UserTransactionInput!): UserTransactionConnection
+
+	"""
+	Get list province by country
+	"""
+	wards(input: WardsPagingInput!): WardsConnection
+}
+
+"""
+count post by status
+"""
+type QuestionAndAnswerHaySai {
+	answer: [UserQuestionAnswerEntity!]!
+	question: [QuestionEntity!]!
+}
+
+type QuestionAnswerEntity implements Node {
+	content: String!
+	correctAnswer: Boolean!
+	id: ID!
+	no: Float!
+	parentNo: String!
+	questionId: String
+}
+
+type QuestionAnswerSimulationEntity implements Node {
+	id: ID!
+	minuteFrom: Float!
+	minuteTo: Float!
+	no: Float!
+	parentNo: Float!
+	point: Float!
+	questionId: String
+	secondFrom: Float!
+	secondTo: Float!
+}
+
+enum QuestionAnswerTypeEnum {
+	SELECT_MULTIPLE
+	SELECT_ONE
+}
+
+"""
+List Question
+"""
+type QuestionConnection implements Connection {
+	items: [QuestionEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+type QuestionEntity implements Node {
+	answers: [QuestionAnswerEntity!]
+	answerType: QuestionAnswerTypeEnum!
+	content: String!
+	explainAnswer: String
+	id: ID!
+	imageExplainAnswer: String
+	images: [String!]
+	isActive: Boolean!
+	no: Float!
+	type: [QuestionTypeEnum!]!
+}
+
+input QuestionGroupByTypeInput {
+	type: QuestionGroupTypeEnum!
+}
+
+"""
+List Question
+"""
+type QuestionGroupConnection implements Connection {
+	items: [QuestionGroupEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+type QuestionGroupEntity implements Node {
+	createdAt: DateTime!
+	id: ID!
+	name: String!
+	questions: [String!]!
+	type: QuestionGroupTypeEnum!
+	updatedAt: DateTime!
+}
+
+enum QuestionGroupTypeEnum {
+	BIEN_BAO
+	CAU_TAO_VA_SUA_CHUA_XE
+	DIEM_LIET
+	KHAI_NIEM_QUY_TAC
+	KY_THUAT_LAI_XE
+	NGHIEP_VU_VAN_TAI
+	SA_HINH
+	SA_HINH_VA_MEO
+	THI_THU
+	VAN_HOA_DAO_DUC_LAI_XE
+}
+
+"""
+List Question Simulation Group
+"""
+type QuestionSimilationGroupConnection implements Connection {
+	items: [QuestionSimulationGroupEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+"""
+List question simulations
+"""
+type QuestionSimulationConnection implements Connection {
+	items: [QuestionSimulationEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+type QuestionSimulationEntity implements Node {
+	answers: [QuestionAnswerSimulationEntity!]
+	content: String!
+	explainAnswer: String
+	id: ID!
+	imageDetail: [Media!]
+	images: [String!]
+	mediaDetail: Media
+	no: Float!
+	pointLastOfUser: Float
+	type: [QuestionSimulationTypeEnum!]!
+	videos: [String!]
+}
+
+input QuestionSimulationGroupByTypeInput {
+	type: QuestionSimulationGroupTypeEnum!
+}
+
+type QuestionSimulationGroupEntity implements Node {
+	createdAt: DateTime!
+	id: ID!
+	name: String!
+	pointLastOfUser: Float
+	questions: [String!]!
+	questionSimulationDetails: [QuestionSimulationEntity!]
+	type: QuestionSimulationGroupTypeEnum!
+	updatedAt: DateTime!
+}
+
+enum QuestionSimulationGroupTypeEnum {
+	CAU_HAY_SAI
+	CAU_SAI
+	CHUONG_I_GIAO_THONG_DO_THI
+	CHUONG_II_GIAO_THONG_O_KHU_VUC_NGOAI_THANH
+	CHUONG_III_GIAO_THONG_TREN_CAO_TOC
+	CHUONG_IV_GIAO_THONG_TREN_DUONG_NUI
+	CHUONG_V_GIAO_THONG_TREN_DUONG_QUOC_LO
+	CHUONG_VI_TAI_NAN_GIAO_THONG_THUC_TE
+	THI_THU
+}
+
+enum QuestionSimulationTypeEnum {
+	CHUONG_I_GIAO_THONG_DO_THI
+	CHUONG_II_GIAO_THONG_O_KHU_VUC_NGOAI_THANH
+	CHUONG_III_GIAO_THONG_TREN_CAO_TOC
+	CHUONG_IV_GIAO_THONG_TREN_DUONG_NUI
+	CHUONG_V_GIAO_THONG_TREN_DUONG_QUOC_LO
+	CHUONG_VI_TAI_NAN_GIAO_THONG_THUC_TE
+}
+
+enum QuestionTypeEnum {
+	BIEN_BAO
+	CAU_TAO_VA_SUA_CHUA_XE
+	DIEM_LIET
+	KHAI_NIEM_QUY_TAC
+	KY_THUAT_LAI_XE
+	NGHIEP_VU_VAN_TAI
+	SA_HINH
+	VAN_HOA_DAO_DUC_LAI_XE
+}
+
+type RatingEntity implements Node {
+	content: String
+	createdAt: DateTime!
+	id: ID!
+	rating: Float!
+	sellerStore: String!
+	updatedAt: DateTime!
+	user: UserEntity
+	userId: String!
+}
+
+"""
+List user transfer request
+"""
+type RevenuePerUserType {
+	change: Float!
+	value: Float!
+}
+
+type ReviewCategoriesEntity implements Node {
+	createdAt: DateTime!
+	id: ID!
+	isActive: Boolean!
+	nameEn: String!
+	nameVi: String!
+	slug: String!
+	total: Float
+	updatedAt: DateTime!
+}
+
+"""
+List review
+"""
+type ReviewConnection implements Connection {
+	items: [ReviewsEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+type ReviewsEntity implements Node {
+	categories: ReviewCategoriesEntity
+	category: String!
+	contentEn: String
+	contentVi: String
+	createdAt: DateTime!
+	descriptionEn: String
+	descriptionVi: String
+	id: ID!
+	isActive: Boolean!
+	mediaIds: [String!]!
+	medias: [Media!]
+	nameEn: String
+	nameVi: String
+	slug: String
+	thumnail: String!
+	updatedAt: DateTime!
+}
+
+enum ReviewSortEnum {
+	LASTEST
+	OLDEST
+	TITLE_ASC
+	TITLE_DESC
+}
+
+type Room implements Node {
+	createBy: String!
+	createdAt: String!
+	createFor: String
+	id: ID!
+	image: String
+	isDelete: Boolean
+	lastUpdated: String
+	members: [RoomMember!]
+	message: Message
+	roomName: String
+	roomType: String
+	unread: Float
+	updatedAt: String!
+}
+
+type RoomConnection {
+	items: [Room!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+type RoomMember implements Node {
+	createdAt: String!
+	id: ID!
+	role: String!
+	roomId: String!
+	updatedAt: String!
+	user: UserEntity
+	userId: String!
+}
+
+enum RoomTypeEnum {
+	GROUP
+	PRIVATE
+	PUBLISH
+}
+
+input SeenMessagesInput {
+	roomId: String!
+}
+
+"""
+count total
+"""
+type SellerTotal {
+	product: Float!
+	view: Float!
+}
+
+input SendOtpInput {
+	phone: String!
+}
+
+enum SNSTypeEnum {
+	APPLE
+	FACEBOOK
+	GOOGLE
+}
+
+input SocialLoginInput {
+	accessToken: String!
+	deviceToken: String!
+	firstName: String
+	lastName: String
+	type: SNSTypeEnum!
+}
+
+enum SortTypeEnum {
+	ASC
+	DESC
+}
+
+enum StatusBuyingDemandEnum {
+	NEW
+	PURCHASED
+}
+
+enum StatusCarBuyingNeedEnum {
+	CHANGED_MIND
+	CONSIDERING
+	FOLLOWING
+	HAD_A_CAR
+	NEW
+}
+
+enum StatusCommonEnum {
+	ACTIVE
+	PENDING
+	REJECT
+}
+
+input SubmitQuestionAnwserHaySaiInput {
+	data: [SubmitQuestionAnwserHaySaiTypeInput!]!
+}
+
+input SubmitQuestionAnwserHaySaiTypeInput {
+	answerNo: String!
+	isCorrect: Boolean!
+	questionNo: Float!
+}
+
+input SubmitQuestionGroupAnwserInput {
+	data: [SubmitQuestionGroupAnwserTypeInput!]!
+	groupType: QuestionGroupTypeEnum!
+}
+
+input SubmitQuestionGroupAnwserSimulationInput {
+	data: [SubmitQuestionGroupAnwserSimulationTypeInput!]
+	groupType: QuestionSimulationGroupTypeEnum!
+}
+
+input SubmitQuestionGroupAnwserSimulationOneRowInput {
+	data: SubmitQuestionGroupAnwserSimulationTypeInput!
+	groupType: QuestionSimulationGroupTypeEnum!
+}
+
+input SubmitQuestionGroupAnwserSimulationTypeInput {
+	point: Float!
+	questionGroupId: String
+	questionNo: Float!
+}
+
+input SubmitQuestionGroupAnwserTypeInput {
+	answerNo: String!
+	isCorrect: Boolean!
+	questionGroupId: String
+	questionNo: String!
+}
+
+type Subscription {
+	newMessage(roomId: String!): Message!
+	updateRooms: Room!
+}
+
+enum TransactionLogStatusEnum {
+	FAILED
+	PENDING
+	PROCESSING
+	PUCHASED
+	RECEIVED
+	REJECTED
+}
+
+enum TypeCarVersionEnum {
+	MULTI
+	SINGEL
+}
+
+input UpdateUserAvatarInput {
+	mediaId: String!
+}
+
+input UpdateUserInput {
+	cityId: String!
+	countryCode: String!
+	firstName: String!
+	lastName: String!
+}
+
+input UserActiveEmailInput {
+	email: String!
+}
+
+type UserBalanceEntity implements Node {
+	amount: Float!
+	id: ID!
+	promotion: Float!
+	userId: String!
+}
+
+enum UserBalanceTypeEnum {
+	AMOUNT
+	KAR
+}
+
+input UserBlockInput {
+	id: String!
+	reason: String!
+}
+
+input UserChangePasswordInput {
+	newPassword: String!
+	password: String
+}
+
+input UserConfirmActiveEmailInput {
+	email: String!
+	otpCode: String!
+}
+
+"""
+List user
+"""
+type UserConnection implements Connection {
+	items: [UserEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+"""
+List user transfer request
+"""
+type UserCountByLocation {
+	cityid: String
+	count: Float!
+	province: ProviceEntity
+}
+
+input UserCreateLogsCommonInput {
+	type: UserLogsCommonServicesTypeEnum!
+}
+
+type UserEntity implements Node {
+	avatar: String
+	avatarMedia: Media
+	createdAt: DateTime!
+	dob: String
+	email: String
+	firstName: String
+	hasPassword: Boolean
+	id: ID!
+	isActive: Boolean!
+	isActiveEmail: Boolean!
+	isActivePhone: Boolean!
+	isWithdraw: Boolean!
+	lastLoginAt: DateTime
+	lastName: String
+	metadata: UserMetadata
+	phone: String
+	prefixPhone: String
+	referralCode: String!
+	storeName: String
+	updatedAt: DateTime!
+	userBalance: UserBalanceEntity
+	username: String
+	withdrawReason: String
+}
+
+input UserForgotPasswordInput {
+	emailOrPhone: String!
+}
+
+input UserInput {
+	userId: String!
+}
+
+input UserListPostInput {
+	keyword: String
+	skip: Float
+	status: UserPostStatusEnum!
+	take: Float
+}
+
+input UserListQuestionGroupByTypeInput {
+	id: String!
+}
+
+enum UserLogsCommonServicesTypeEnum {
+	COLD_PENALTY
+	GARAGES
+	PARKING
+}
+
+type UserMetadata implements Node {
+	avgRating: Float!
+	cityId: String
+	country: CountriesEntity
+	countryId: String
+	enableEmailNotification: Boolean!
+	enableNotification: Boolean!
+	enablePromotionsEmailNotification: Boolean!
+	enablePromotionsNotification: Boolean!
+	enableSMS: Boolean!
+	id: ID!
+	language: LanguageEnum!
+	provice: ProviceEntity
+	totalRating: Float!
+	types: [UserTypeEnum!]
+	userId: String!
+}
+
+enum UserPostStatusEnum {
+	ACTIVE
+	DRAFT
+	EXPIRED
+	PENDING
+	REJECTED
+	SOLD
+}
+
+"""
+List user promotion
+"""
+type UserPromotionConnection implements Connection {
+	items: [UserPromotionEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+type UserPromotionEntity implements Node {
+	createdAt: DateTime!
+	descriptionEn: String!
+	descriptionVi: String!
+	id: ID!
+	image: String!
+	titleEn: String!
+	titleVi: String!
+	type: UserPromotionEnum!
+	updatedAt: DateTime!
+	userId: String!
+	value: Float!
+}
+
+enum UserPromotionEnum {
+	KAR
+	MONEY
+}
+
+type UserQuestionAnswerEntity implements Node {
+	answerNo: String
+	createdAt: DateTime!
+	id: ID!
+	isCorrect: Boolean!
+	questionGroupId: String
+	questionGroupSessionId: String
+	questionNo: Float
+	updatedAt: DateTime!
+	userId: String!
+}
+
+type UserQuestionAnswerSimulationEntity implements Node {
+	answerNo: String
+	createdAt: DateTime!
+	id: ID!
+	point: Float!
+	questionGroupId: String
+	questionGroupSessionId: String
+	questionNo: Float
+	updatedAt: DateTime!
+	userId: String!
+}
+
+type UserReportEntity implements Node {
+	content: String
+	createdAt: DateTime!
+	id: ID!
+	reason: String
+	type: UserReportType!
+	updatedAt: DateTime!
+	userId: String!
+	userReportId: String!
+}
+
+input UserReportInput {
+	content: String
+	reason: String
+	reportType: UserReportType!
+	userReportId: String!
+}
+
+"""
+UserReportType
+"""
+enum UserReportType {
+	FAKE_LISTING
+	FAKE_USER
+	FRAUD_USER
+	OTHERS
+}
+
+type UserRequestBankTransferEntity implements Node {
+	amount: Float!
+	bankName: String!
+	createdAt: DateTime!
+	id: ID!
+	moneyTransferReason: String
+	status: UserRequestBankTransferStatusEnum!
+	updatedAt: DateTime!
+	userId: String!
+	users: UserEntity
+}
+
+input UserRequestBankTransferInput {
+	amount: Float!
+	bankCode: String!
+}
+
+enum UserRequestBankTransferStatusEnum {
+	CONFIRM
+	NEW
+	REJECT
+}
+
+"""
+List user transfer request
+"""
+type UserRequestTransferConnection implements Connection {
+	items: [UserRequestBankTransferEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+enum UserRoleEnum {
+	ALL
+	BUYER
+	SELLER
+}
+
+input UsersInput {
+	cityId: String
+	createFrom: String
+	createTo: String
+	keyword: String
+	role: UserRoleEnum
+	skip: Float
+	status: UserStatusEnum
+	take: Float
+}
+
+input UsersRatingInput {
+	rating: Float!
+	skip: Float
+	take: Float
+}
+
+"""
+List user transfer request
+"""
+type UserStatusCount {
+	active: Float!
+	total: Float!
+	totalViewPost: Float!
+	unverified: Float!
+}
+
+enum UserStatusEnum {
+	ACTIVE
+	DEACTIVE
+}
+
+"""
+List user transfer request
+"""
+type UserTotalNoByTime {
+	count: Float!
+	date: String!
+}
+
+"""
+List user transfer request
+"""
+type UserTotalRevenue {
+	count: Float!
+	type: String!
+}
+
+"""
+List user transaction
+"""
+type UserTransactionConnection implements Connection {
+	items: [UserTransactionLogsEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+input UserTransactionInput {
+	skip: Float
+	take: Float
+}
+
+type UserTransactionLogsEntity implements Node {
+	amount: Float!
+	balanceType: UserBalanceTypeEnum!
+	bank: BanksEntity
+	bankCode: String
+	createdAt: DateTime!
+	id: ID!
+	lastAmount: Float!
+	meta: String
+	note: String
+	status: TransactionLogStatusEnum!
+	target: String
+	type: UserTransactionUpdateEnum!
+	updatedAt: DateTime!
+	userId: String!
+}
+
+enum UserTransactionUpdateEnum {
+	ADMIN_ADD
+	AUTO_RENEW_POST
+	BANK_TRANSFER
+	CREATE_NEW_POST
+	CUSTOMER_ADD
+	DEPOSIT
+	INVITE_CODE
+	KAR_GIVE_WAY_NEW_USER
+	MANUAL_RENEW_POST
+	PROMOTIONAL_GIFTS
+	RE_ACTIVE_POST
+	REFERRAL_CODE
+	STRIPE
+	UPDATE_POST
+	VN_PAY
+}
+
+input UserTransferRequestInput {
+	createFrom: String
+	createTo: String
+	keyword: String
+	skip: Float
+	status: UserRequestBankTransferStatusEnum
+	take: Float
+	userId: String
+}
+
+enum UserTypeEnum {
+	BUYERS
+	CAR_OWNERSHIP
+	GARA_SALON_OWNER
+	LEARN_DRIVER_LICENSE
+	PAKING_OWNER
+	SELLERS
+}
+
+input UserUpdateLanguageInput {
+	language: LanguageEnum!
+}
+
+input UserUpdateNotificationInput {
+	status: Boolean!
+	type: NotificationTypeEnum!
+}
+
+enum UserUpdatePostStatusEnum {
+	ACTIVE
+	DELETE
+	SOLD
+}
+
+input UserUpdateStatusInput {
+	planId: String!
+	postId: String!
+	status: UserUpdatePostStatusEnum!
+}
+
+input UserUpdateStoreNameInput {
+	name: String!
+}
+
+input UserVerifyActivePhoneInput {
+	otpCode: String!
+	phone: String!
+	prefixPhone: String!
+}
+
+input UserVerifyForgotPasswordEmailInput {
+	email: String!
+	newPassword: String!
+	otpCode: String!
+}
+
+input UserVerifyForgotPasswordPhoneInput {
+	newPassword: String!
+	otpCode: String!
+	phone: String!
+	prefixPhone: String!
+}
+
+input UserWithDrawInput {
+	reason: String!
+}
+
+input VerifyOtpInput {
+	code: String!
+	phone: String!
+}
+
+"""
+List Ward
+"""
+type WardsConnection implements Connection {
+	items: [WardsEntity!]!
+	links: PaginationLinks!
+	meta: PaginationMeta!
+}
+
+type WardsEntity implements Node {
+	districtCode: Float!
+	id: ID!
+	isActive: Boolean!
+	name: String!
+	prefix: String!
+	provinceCode: Float!
+}
+
+input WardsPagingInput {
+	districtCode: String!
+	keyword: String
+	skip: Float
+	take: Float
+}

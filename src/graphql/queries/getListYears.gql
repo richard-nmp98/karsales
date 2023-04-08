@@ -1,0 +1,7 @@
+query getListYears {
+  getListYears {
+    id
+    name
+    isActive
+  }
+}

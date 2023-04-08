@@ -1,0 +1,12 @@
+query getReviewsCatetories {
+	getReviewsCatetories {
+		createdAt
+		id
+		isActive
+		nameEn
+		nameVi
+		slug
+		total
+		updatedAt
+	}
+}

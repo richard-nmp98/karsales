@@ -1,0 +1,15 @@
+{
+  "presets": [
+    "next/babel"
+  ],
+  "plugins": [
+    "inline-react-svg",
+    "lodash",
+    [
+      "styled-components",
+      {
+        "ssr": true
+      }
+    ]
+  ]
+}

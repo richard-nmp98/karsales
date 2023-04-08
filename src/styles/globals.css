@@ -1,0 +1,319 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.base {
+    @apply bg-white text-black justify-around justify-center;
+}
+
+.grecaptcha-badge,
+.grecaptcha-logo {
+    display: none !important;
+}
+
+body {
+    font-family: 'Averta Std CY', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.modal-rounded-0 .ant-modal-content {
+    border-radius: 0;
+}
+
+.modal-bg-main-500 .ant-modal-content {
+    @apply bg-main-500;
+}
+
+.ant-modal .ant-modal-close:hover {
+    color: transparent;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.kar-swiper-carousel .swiper-pagination-bullet-active {
+    background: #FB4E4C;
+}
+
+.header-main {
+    @apply transition-all duration-300 ease-in-out;
+}
+
+.header-main.header-sticky {
+    @apply fixed top-0 left-0 right-0 z-[999];
+}
+
+.menu-main:not(.menu-main-mobile) > .kar-navigation {
+    @apply space-x-5 cursor-default;
+    @apply md:space-x-2 lg:space-x-5;
+}
+
+.menu-main > .kar-navigation > li {
+    @apply inline-block;
+}
+
+.menu-main:not(.menu-main-mobile) .kar-navigation:not(.sub-navigation) > li > a {
+    @apply py-5 text-white;
+}
+
+.menu-main .kar-navigation li a {
+    @apply inline-block p-3 font-semibold text-lg relative;
+}
+
+.menu-main .kar-navigation li.navigation-item a:before {
+    @apply content-[''] absolute left-[0.75rem] w-0 bottom-0 h-[3px] bg-[#ffd726];
+    @apply transition-all duration-300 ease-in-out;
+}
+
+.menu-main .kar-navigation li.navigation-item-current > a:before,
+.menu-main .kar-navigation li.navigation-item.active > a:before,
+.menu-main .kar-navigation li.navigation-item a:hover:before {
+    width: calc(100% - 1.5rem);
+}
+
+.menu-main:not(.menu-main-mobile) .sub-navigation {
+    @apply absolute hidden z-[9999];
+    @apply bg-main-500 text-white px-3 py-3;
+}
+
+.menu-main .kar-navigation li:hover > .sub-navigation,
+.menu-main.menu-main-mobile .kar-navigation li {
+    @apply block;
+}
+
+.menu-main-mobile .kar-navigation li a {
+    @apply block p-3 font-semibold text-lg text-white px-0;
+}
+
+.menu-main-mobile .kar-navigation li.navigation-item a:before {
+    @apply left-0;
+}
+
+.menu-main-mobile .kar-navigation > li > a {
+    @apply border-b border-dashed;
+}
+
+.menu-main-mobile .kar-navigation:not(.sub-navigation) > li:last-child > a {
+    @apply border-b-0;
+}
+
+.menu-main-mobile .sub-navigation li {
+    @apply ml-4;
+}
+
+.menu-main-mobile .kar-navigation .kar-has-sub-navigation > a {
+    @apply pr-[25px];
+}
+
+.menu-main-mobile .kar-has-sub-navigation .icon {
+    @apply absolute right-0 top-[calc(50%_-_10px)];
+}
+
+.menu-main-mobile .kar-has-sub-navigation .icon .kar-icon-sub {
+    @apply relative w-[20px] h-[20px] inline-block;
+}
+
+.menu-main-mobile .kar-has-sub-navigation .icon .kar-icon-sub:before,
+.menu-main-mobile .kar-has-sub-navigation .icon .kar-icon-sub:after {
+    @apply absolute content-[''] bg-white transition-all duration-300;
+}
+
+.menu-main-mobile .kar-has-sub-navigation .icon .kar-icon-sub:before {
+    @apply top-0 left-[50%] w-[4px] h-[100%] ml-[-2px];
+}
+
+.menu-main-mobile .kar-has-sub-navigation .icon .kar-icon-sub:after {
+    @apply left-0 top-[50%] h-[4px] w-[100%] mt-[-2px];
+}
+
+.menu-main-mobile .kar-has-sub-navigation.active .icon .kar-icon-sub:before {
+    @apply transform rotate-90;
+}
+
+.menu-main-mobile .kar-has-sub-navigation.active .icon .kar-icon-sub:after {
+    @apply transform rotate-180;
+}
+
+.menu-main-mobile .kar-navigation li.navigation-item-current > a:before,
+.menu-main-mobile .kar-navigation li.navigation-item a:hover:before,
+.menu-main.menu-main-mobile .kar-navigation li.navigation-item.active > a::before {
+    @apply w-full;
+}
+
+.menu-main-mobile .sub-navigation {
+    @apply relative h-0 z-[-1];
+}
+
+.menu-main-mobile .kar-navigation li.navigation-item.active > .sub-navigation {
+    @apply h-auto z-10;
+}
+
+.kar-drawer-menu-mobile .ant-drawer-header-title .ant-drawer-title {
+    @apply text-white lg:text-4xl md:text-2xl text-4xl font-bold italic;
+}
+
+.kar-pagination .ant-pagination {
+    @apply text-center md:text-left;
+}
+
+.kar-pagination .ant-pagination-item,
+.kar-pagination .ant-pagination-prev,
+.kar-pagination .ant-pagination-next {
+    @apply border-0 min-w-[16px] h-[16px] sm:min-w-[32px] sm:h-[32px] leading-[16px] sm:leading-[32px];
+}
+
+.kar-pagination .ant-pagination-item a,
+.kar-pagination .next,
+.kar-pagination .prev {
+    @apply relative inline-flex items-center rounded-full h-6 w-6 sm:h-10 sm:w-10 items-center justify-center border border-gray-300 bg-white text-sm font-semibold text-[#003DC6] focus:z-20;
+}
+
+.kar-pagination .ant-pagination-item-active a,
+.kar-pagination .ant-pagination-item a:hover,
+.kar-pagination .ant-pagination-next .next:hover,
+.kar-pagination .ant-pagination-prev .prev:hover {
+    @apply bg-main-500 text-white border-main-500;
+}
+
+.experience-pagination .ant-pagination-next,
+.experience-pagination .ant-pagination-prev {
+    @apply top-[2px] relative;
+}
+
+.experience-pagination .ant-pagination {
+    @apply text-right;
+}
+
+.kar-pagination .ant-pagination-options {
+    @apply hidden;
+}
+
+.kar-pagination-small.kar-pagination .ant-pagination-item a,
+.kar-pagination-small.kar-pagination .next,
+.kar-pagination-small.kar-pagination .prev {
+    @apply h-7 w-7;
+}
+
+.ant-form-item .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+    @apply content-[""] !important;
+    margin-inline-end: 0 !important;
+}
+
+.ant-form-item .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::after {
+    @apply content-["*"] inline-block text-[#ff4d4f] text-[14px] leading-none;
+    margin-inline-start: 4px;
+}
+
+.kar-modal-video .ant-modal-mask {
+    @apply bg-black bg-opacity-90;
+}
+
+.kar-modal-video .ant-modal-content {
+    @apply bg-transparent;
+}
+
+.swiper-pagination-bullet-active {
+    @apply bg-[#CCCCCC] !important;
+}
+
+.swiper-pagination-bullet {
+    @apply bg-[#aaaaaa] !important;
+}
+
+.tabs-news.ant-tabs .ant-tabs-ink-bar {
+    @apply h-0;
+}
+
+.tabs-news.ant-tabs-top > .ant-tabs-nav::before {
+    @apply border-0;
+}
+
+.tabs-news .ant-tabs-tab {
+    @apply p-0;
+}
+
+.tabs-news.ant-tabs .ant-tabs-tab + .ant-tabs-tab {
+    @apply ml-3 md:ml-8;
+}
+
+.tabs-news .ant-tabs-tab .ant-tabs-tab-btn {
+    @apply block py-1 px-4 uppercase rounded-[5px] bg-white text-black hover:bg-main-500 hover:text-white text-[16px];
+}
+
+.tabs-news .ant-tabs-tab-active .ant-tabs-tab-btn {
+    @apply bg-main-500;
+    @apply text-white !important;
+}
+
+.review-detail p, .review-detail .media-wrap {
+    @apply mb-2;
+}
+
+h6,
+h5,
+h4,
+h3,
+h2,
+h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: calc(1.375rem + 1.5vw);
+}
+
+.short-border-title {
+    @apply relative inline-block;
+}
+
+.short-border-title:after {
+    @apply absolute bottom-0 left-0 w-[30%] h-[3px] bg-[#FB4E4C] content-[''];
+}
+
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+h2 {
+    font-size: calc(1.325rem + 0.9vw);
+}
+
+@media (min-width: 1200px) {
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+h3 {
+    font-size: calc(1.3rem + 0.6vw);
+}
+
+@media (min-width: 1200px) {
+    h3 {
+        font-size: 1.75rem;
+    }
+}
+
+h4 {
+    font-size: calc(1.275rem + 0.3vw);
+}
+
+@media (min-width: 1200px) {
+    h4 {
+        font-size: 1.5rem;
+    }
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}

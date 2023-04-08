@@ -1,0 +1,34 @@
+query getListModels($input: CarModelListInput!) {
+	getListModels(input: $input) {
+		brand
+		brandMeta {
+			id
+			image
+			isActive
+			isDisplayTopSearch
+			mediaDetail {
+				createdAt
+				deletedAt
+				fileName
+				filePathLG
+				filePathOriginal
+				filePathSM
+				id
+				isDeleted
+				mimeType
+				updatedAt
+				uploadBy
+			}
+			mediaId
+			name
+			slug
+			totalPost
+		}
+		id
+		image
+		isActive
+		name
+		slug
+		totalPost
+	}
+}

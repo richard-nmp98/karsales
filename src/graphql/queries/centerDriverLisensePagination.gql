@@ -1,0 +1,81 @@
+query centerDriverLisensePagination($input: ListCenterDriverLisenseInput!) {
+	centerDriverLisensePagination(input: $input) {
+		items {
+			address
+			averageRating
+			createdAt
+			description
+			district
+			districtDetail {
+				id
+				isActive
+				name
+				prefix
+				provinceCode
+			}
+			email
+			id
+			isActive
+			medias {
+				centerId
+				createdAt
+				id
+				mediaDetail {
+					createdAt
+					deletedAt
+					fileName
+					filePathLG
+					filePathOriginal
+					filePathSM
+					id
+					isDeleted
+					mimeType
+					updatedAt
+					uploadBy
+				}
+				mediaId
+				updatedAt
+			}
+			phone
+			province
+			provinceDetail {
+				code
+				countryCode
+				id
+				isActive
+				name
+				slug
+			}
+			slug
+			title
+			totalRating
+			totalRatingScore
+			updatedAt
+			ward
+			wardDetail {
+				districtCode
+				id
+				isActive
+				name
+				prefix
+				provinceCode
+			}
+			website
+		}
+		links {
+			first
+			last
+			next
+			previous
+		}
+		meta {
+			currentPage
+			itemCount
+			itemsPerPage
+			next
+			previous
+			totalItems
+			totalPages
+		}
+	}
+}

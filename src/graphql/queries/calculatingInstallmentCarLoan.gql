@@ -1,0 +1,28 @@
+query calculatingInstallmentCarLoan($input: CalculatingInstallmentCarLoanInput!) {
+	calculatingInstallmentCarLoan(input: $input) {
+		bodyInsuranceOneYear
+		civilInsurance
+		interestRate
+		licensePlateFee
+		listCarPurchaseCostEstimaterDetails {
+			interestAmount
+			principalAmount
+			remainAmount
+			session
+			totalAmount
+		}
+		loanTime
+		prepaidCarAmountRate
+		priceCarVersion
+		pricePrepaidCar
+		registrationFee
+		registry
+		roadMaintenanceFee
+		rollingPrice
+		totalAmountRemainPrincipalAndInterest
+		totalCost
+		totalEstimatedCarPurchaseCost
+		totalInterest
+		totalLoanAmount
+	}
+}

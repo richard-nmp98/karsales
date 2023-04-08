@@ -1,0 +1,26 @@
+query districts($input: DistrictsPagingInput!) {
+	districts(input: $input) {
+		items {
+			id
+			isActive
+			name
+			prefix
+			provinceCode
+		}
+		links {
+			first
+			last
+			next
+			previous
+		}
+		meta {
+			currentPage
+			itemCount
+			itemsPerPage
+			next
+			previous
+			totalItems
+			totalPages
+		}
+	}
+}

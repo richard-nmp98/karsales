@@ -1,0 +1,261 @@
+{
+  "name": "CHÍNH SÁCH BẢO MẬT",
+  "subname": "SÀN GIAO DỊCH THƯƠNG MẠI ĐIỆN TỬ KAR (KARSALES.ASIA)",
+  "data": [
+    {
+      "name": "A. QUY ĐỊNH ĐĂNG TIN",
+      "description": "Với nhu cầu ngày càng tăng của hoạt động mua bán của thị trường ô tô, KAR không giới hạn số tin đăng bán trên ứng dụng KAR, để có thể sử dụng tối đa tính năng của ứng dụng, thành viên được đề nghị cung cấp đầy đủ thông tin và xác thực chúng theo hướng dẫn của chúng tôi. Đồng thời, KAR cũng khuyến cáo quý khách vui lòng lưu ý một số điểm sau:",
+      "data": [
+        {
+          "text": "1. Người đăng tin hoàn toàn chịu trách nhiệm về tính xác thực, minh bạch và chính xác của nội dung do mình đăng lên KAR."
+        },
+        {
+          "text": "2. Tin đăng phải được viết bằng tiếng Việt có dấu, đúng chính tả, chỉ viết hoa danh từ riêng, và đầu câu. Nội dung tin đăng không viết tắt, sử dụng từ ngữ gây hiểu lầm, nội dung khác vi phạm pháp luật hiện hành."
+        },
+        {
+          "text": "3. Tin đăng không chứa các nội dung bên ngoài việc bán xe."
+        },
+        {
+          "text": "4. Mỗi tin đăng chỉ được rao bán cho duy nhất một (01) xe."
+        },
+        {
+          "text": "5. Nội dung tin đăng phải đúng sự thật, đầy đủ thông tin về chiếc xe cần bán, thông tin nhất quán, xe được đăng bán phải trong trạng thái còn giao dịch."
+        },
+        {
+          "text": "6. Hình ảnh trong tin đăng phải chính xác với hình ảnh thực tế của xe, không sử dụng hình ảnh lấy trên mạng. Không chèn thêm link của bất kỳ website nào khác, ngoại trừ link video về xe được đăng bán."
+        },
+        {
+          "text": "7. Không đăng tin trùng với tin đang hiển thị."
+        },
+        {
+          "text": "8. Tất cả các tin đăng đều được kiểm duyệt bởi nhân sự của KAR. Chúng tôi có quyền chỉnh sửa các tin đăng theo đúng quy chuẩn và từ chối đăng các tin không hợp lệ theo quy định trên, hoặc vi phạm một trong các điều sau:",
+          "isPaddingLetf": true,
+          "child": [
+            "- Có dấu hiệu spam: đăng nhiều tin cùng một nội dung, đăng nhiều tin cho cùng một (01) xe bằng một (01) hoặc nhiều tài khoản khác nhau, đăng rao bán nhiều hơn một (01) sản phẩm trong một (01) tin rao",
+            "- Tin đăng không đúng nội dung, không đúng với chiếc xe cần bán.",
+            "- Thông tin về chiếc xe đăng bán không hợp lý.",
+            "- Hình ảnh xe có chất lượng quá thấp.",
+            "- Có các biểu hiện lừa đảo, không minh bạch dựa theo phản ánh của người dùng khác và được xác minh bởi nhân sự của KAR.",
+            "- Không thanh toán phí tin đăng theo quy định của KAR."
+          ]
+        },
+        {
+          "text": "KAR có quyền",
+          "isPaddingLetf": true,
+          "child": [
+            "- Không duyệt các tin của khách hàng nếu như tin đăng vi phạm quy chế đăng tin.",
+            "- KAR giữ quyền quyết định về việc lưu giữ hay loại bỏ tin đã đăng trên trang KAR mà không cần báo trước cho người đăng tin.",
+            "- KAR có toàn quyền thay đổi một (01) hay nhiều điều khoản có trong quy định về đăng tin mà không cần giải thích lý do và cũng không cần phải thông báo trước cho thành viên của KAR."
+          ]
+        },
+        {
+          "text": "Nhằm đảm bảo cho Quý khách hàng có những trải nghiệm tốt nhất về dịch vụ và tiện ích khi sử dụng KAR, chúng tôi thu thập các loại thông tin sau đây từ khách hàng:",
+          "isPaddingLetf": true,
+          "child": [
+            "- Thông tin cá nhân (tên)",
+            "- Thông tin liên lạc (số điện thoại, địa chỉ gửi thư, địa chỉ emai)",
+            "- Thông tin tài sản sở hữu, khách hàng đăng bán (cụ thể trên KAR là xe ô tô)",
+            "- Thông tin về website chủ quản của người đăng ký (nếu có)"
+          ]
+        },
+        {
+          "text": "Những thông tin trên được KAR sử dụng vào các mục đích sau:",
+          "isPaddingLetf": true,
+          "child": [
+            "- Thực hiện xác thực thông tin tài khoản thành viên;",
+            "- Thực hiện và quản lý việc đăng thông tin và kiểm duyệt thông tin công khai; Thực hiện và quản lý lưu lượng khách hàng đang sử dụng dịch vụ của KAR; Thực hiện và quản lý hoạt động tiếp thị, cung cấp thông tin khuyến mại tới KH như gửi các cập nhật mới nhất về thông tin khuyến mại và chào giá mới liên quan đến sản phẩm và dịch vụ của chúng tôi;",
+            "- Cải thiện trải nghiệm dịch vụ nhằm phục vụ nhu cầu của khách hàng;",
+            "- Phân tích, đánh giá số liệu liên quan đến dữ liệu người dùng;",
+            "- Tiếp nhận thông tin, góp ý, đề xuất, khiếu nại của khách hàng nhằm cải thiện chất lượng dịch vụ và liên hệ để giải quyết nhu cầu của khách hàng khi cần.",
+            "- Nếu sử dụng thông tin này cho những mục đích khác như cung cấp thông tin cho bên thứ ba, chúng tôi sẽ có thông báo lưu ý với khách hàng trước. Trong trường hợp khách hàng từ chối chối cung cấp đầy đủ các thông tin được yêu cầu, chúng tôi không cung cấp thông tin cho bên khác, trừ trường hợp được yêu cầu từ chính quyền, cơ quan pháp luật."
+          ]
+        },
+        {
+          "text": "Mọi thắc mắc về vấn đề đăng tin và quản lý tài khoản, quý khách vui lòng liên hệ với bộ phận Chăm sóc khách hàng của KAR để được tư vấn và giải đáp."
+        }
+      ]
+    },
+    {
+      "name": "B. THÔNG TIN KHÁCH HÀNG",
+      "description": "KAR thu thập thông tin của người dùng qua mẫu đăng ký thành viên theo quy trình sử dụng của KAR<br><br>",
+      "data": [
+        {
+          "text": "Thời gian lưu trữ thông tin thu thập",
+          "textBold": true
+        },
+        {
+          "text": "KAR sẽ lưu trữ các thông tin cá nhân do khách hàng cung cấp (qua quá trình đăng ký thành viên) trong quá trình cung cấp dịch vụ cho khách hàng cho đến khi hoàn thành mục đích thu thập, quản lý và phân tích, hoặc khi có yêu cầu hủy các thông tin đã cung cấp từ khách hàng.<br>KAR có quyền xóa bỏ, thay đổi thông tin về tài sản sở hữu của khách hàng (xe ô tô). Nếu thông tin này không được khách hàng sử dụng trong vòng 120 ngày, hệ thống sẽ tự động xóa bỏ."
+        }
+      ]
+    },
+    {
+      "name": "C. CHÍNH SÁCH BẢO MẬT THÔNG TIN",
+      "description": "Chúng tôi – KAR sử dụng các biện pháp bảo mật thích hợp trong việc thu thập, lưu trữ, xử lý và bảo mật dữ liệu để tối đa khả năng truy cập hoặc sửa đổi trái phép từ tin tặc (hacker) cũng như tiết lộ và hủy dữ liệu. KAR chỉ cho phép nhân viên có thẩm quyền truy cập vào thông tin cá nhân của khách hàng phục vụ cho công việc vận hành, phát triển và cải tiến dịch vụ cung cấp cho khách hàng. Các cá nhân này bị ràng buộc nghĩa vụ bảo mật, chịu trách nhiệm hoàn toàn về việc tiếp cận, sử dụng dữ liệu bao gồm việc chấm dứt việc làm và truy tố hình sự khi họ vi phạm các nghĩa vụ này.<br><br>Mỗi thành viên (khách hàng) tự chịu hoàn toàn trách nhiệm bảo mật thông tin tài khoản của mình. KAR cam kết sẽ không cung cấp, công khai thông tin tài khoản của thành viên hoặc người dùng trên KAR cho bất kỳ ai hay bên thứ ba khi chưa có sự đồng ý của thành viên/người dùng trừ trường hợp an ninh, yêu cầu của cơ quan chính quyền. Thông tin của thành viên, người dùng được lưu trữ an toàn trên nền tảng điện toán đám mây được bảo mật bởi nhà cung cấp dịch vụ nổi tiếng - Amazon và được tường lửa bảo vệ. <br><br>Quy định về quyền riêng tư có thể còn một số thiếu sót nhất định, có thể do trục trặc kỹ thuật, vấn đề kiểm soát trong vận hành và một số vấn đề tương tự, tuy nhiên KAR hoàn toàn không chịu trách nhiệm về những thiệt hại do các lỗi đó gây ra. Khách hàng vui lòng tự bảo vệ thông tin cá nhân của mình. KAR thực hiện các biện pháp và nỗ lực tối đa để các tình huống này không xảy ra trong phạm vi khả năng và trách nhiệm của mình. <br><br>Người dùng, người đăng tin sẽ chịu toàn bộ trách nhiệm về tính đúng đắn, chính xác và xác thực của thông tin mà mình cung cấp; người dùng sẽ chịu trách nhiệm về mọi tranh chấp pháp lý xảy ra liên quan đến thông tin mà mình đã cung cấp trên KAR."
+    },
+    {
+      "name": "D. GIẢI ĐÁP VỀ CHÍNH SÁCH BẢO MẬT",
+      "description": "Trong trường hợp có bất kỳ thắc mắc về Chính sách bảo mật này, vui lòng liên hệ với chúng tối qua email hỗ trợ và/hoặc số điện thoại 08.2934.5552 để được hỗ trợ và giải đáp."
+    },
+    {
+      "name": "E. CHÍNH SÁCH BẢO MẬT THÔNG TIN CÁ NHÂN",
+      "data": [
+        {
+          "text": "Thu thập thông tin khách hàng",
+          "textBold": true,
+          "child": [
+            "Với đặc tính của thị trường thương mại ô tô rất phong phú, đa dạng, chúng tôi luôn cố gắng giữ cho những thông tin được đăng trên trang KAR đầy đủ, hữu ích và chính xác nhất có thể. Để thực hiện điều đó, KAR yêu cầu khách hàng phải cung cấp và xác thực thông tin cá nhân trong phạm vi bắt buộc.",
+            "Các thông tin cá nhân mà KAR có thể thu thập từ Khách hàng: họ tên, email, mã số thuế, địa chỉ, điện thoại, nơi làm việc..."
+          ]
+        },
+        {
+          "text": "Sử dụng thông tin cá nhân",
+          "textBold": true,
+          "child": [
+            "Các thông tin cá nhân được khách hàng cung cấp, chúng tôi có thể sử dụng vào các mục đích sau:",
+            "Xác thực thông tin tài khoản của người dùng;",
+            "Cung cấp dịch vụ và/hoặc thực hiện các giao dịch mà khách hàng yêu cầu;",
+            "Cập nhật và gởi thông tin mới nhất đến khách hàng; ",
+            "Sử dụng dữ liệu trong phân tích, đánh giá và hoàn thiện ứng dụng và dịch vụ, quy trình, công nghệ mà KAR cung cấp đến khách hàng;",
+            "Nâng cao chất lượng trải nghiệm dịch vụ, tương tác và liên kết với khách hàng;",
+            "Nếu không có sự đồng ý của Khách hàng, KAR sẽ không cung cấp dữ liệu cho bên thứ ba để họ dùng vào mục đích quảng cáo, chào bán sản phẩm."
+          ]
+        },
+        {
+          "text": "Chia sẻ thông tin cá nhân",
+          "description": "Ngoại trừ các trường hợp về sử dụng thông tin cá nhân như đã nêu trong chính sách này, chúng tôi cam kết sẽ không tiết lộ thông tin cá nhân khách hàng ra ngoài.<br>Chúng tôi có thể tiết lộ hoặc cung cấp thông tin cá nhân của khách hàng trong các trường hợp thật sự cần thiết như sau:",
+          "textBold": true,
+          "isPaddingLetf": true,
+          "child": [
+            "1) khi có yêu cầu của các cơ quan pháp luật;",
+            "2) trong trường hợp mà chúng tôi tin rằng điều đó sẽ giúp chúng tôi bảo vệ quyền lợi chính đáng của mình trước pháp luật;.",
+            "3) tình huống khẩn cấp và cần thiết để bảo vệ quyền an toàn cá nhân của các thành viên khác trên KAR"
+          ]
+        },
+        {
+          "text": "Thời gian lưu trữ thông tin cá nhân",
+          "textBold": true,
+          "child": [
+            "Các thông tin cá nhân của khách hàng mà KAR có được và lữu trữ trong một thời gian cần thiết, nhằm phục vụ hoạt động của KAR và đáp ứng cho các yêu cầu khách hàng.",
+            "Khách hàng có thể liên hệ KAR và yêu cầu chúng tôi xóa dữ liệu cá nhân khi đã chấm dứt là Thành viên của KAR."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "F. THAY ĐỔI THÔNG TIN",
+      "description": "Các thành viên được cấp một tài khoản bao gồm tài khoản và mật khẩu (user và password) để truy cập KAR. Sau khi đăng nhập, thành viên có quyền sử dụng dịch vụ, tiện ích được cung cấp trên ứng dụng theo đúng chức năng, phạm vi quyền hạn được cung cấp."
+    },
+    {
+      "name": "G.CAM KẾT BẢO MẬT",
+      "description": "Chúng tôi cam kết sẽ nỗ lực hết sức và sử dụng các biện pháp thích hợp để các thông tin mà khách hàng cung cấp cho chúng tôi trong quá trình sử dụng ứng dụng được bảo mật tốt nhất.",
+      "data": [
+        {
+          "text": "Chúng tôi không bán, chuyển giao dữu liệu thông tin cá nhân cho bên thứ ba, khi chưa được sự cho phép của thành viên ngoại trừ trường hợp theo yêu cầu của cơ quan nhà nước có thẩm quyền."
+        },
+        {
+          "text": "Trong trường hợp máy chủ lưu trữ thông tin bị tin tặc (hacker) tấn công dẫn đến mất mát dữ liệu cá nhân thành viên, KAR sẽ có trách nhiệm thông báo vụ việc cho cơ quan chức năng điều tra xử lý kịp thời và thông báo cho thành viên được biết."
+        },
+        {
+          "text": "Cung cấp thông tin cá nhân thành viên cho cơ quan nhà nước có thẩm quyền khi có yêu cầu."
+        },
+        {
+          "text": "Nếu xét thấy thông tin của thành viên cung cấp trên KAR là không chính xác, thiếu trung thực, chúng tôi sẽ tiến hành hủy toàn bộ những nội dung của thành viên đó được đăng tải trên KAR mà không cần báo trước cho thành viên."
+        },
+        {
+          "text": "Khách hàng cần cung cấp thông tin cá nhân trong các tình huống sau:",
+          "isPaddingLetf": true,
+          "child": [
+            "- Đăng ký và xác thực thành viên sử dụng ứng dụng KAR;",
+            "- Yêu cầu báo giá, cung cấp thông tin, dịch vụ hoặc hỗ trợ;",
+            "- Đặt mua và sử dụng dịch vụ đăng tin của KAR;",
+            "- Tham gia khảo sát ý kiến, hoạt động quảng bá hoặc các hoạt động khuyến mại;",
+            "- Đăng ký nhận tin thư, email quảng cáo hoặc các loại tin tức khác;",
+            "- Đăng ký tham dự tuyển dụng, gửi hồ sơ, lý lịch;"
+          ]
+        },
+        {
+          "text": "Chúng tôi chỉ thu thập và sử dụng thông tin cá nhân của khách hàng trên ứng dụng KAR chỉ sau khi khách hàng đã đăng ký tài khoản, tức đã được sự đồng ý trước của khách hàng."
+        }
+      ]
+    },
+    {
+      "name": "H. THAY ĐỔI CHÍNH SÁCH",
+      "description": "Chúng tôi hoàn toàn có thể thay đổi nội dung trong trang này để phù hợp với các nhu cầu của KAR cũng như nhu cầu và sự phản hồi từ khách hàng nếu có. Khi những nội dung này được chỉnh sửa hoặc thay đổi, chúng tôi sẽ cập nhật trên ứng dụng trước 15 ngày để tất cả khách hàng tham gia và sử dụng dịch vụ của KAR được biết. Sau 15 ngày, nếu không có bất kỳ phản hồi nào, các khách hàng sẽ bị ràng buộc bởi các thỏa thuận mà chúng tôi điều chỉnh. Khi cập nhật nội dung chính sách này, chúng tôi sẽ chỉnh sửa lại thời gian “Cập nhật lần cuối” trên Ứng dụng",
+      "data": [
+        {
+          "description": "Nội dung về chính sách bảo mật này chỉ áp dụng tại Ứng dụng KAR, không bao gồm hoặc liên quan đến các bên thứ ba đặt quảng cáo. KAR khuyên cáo khách hàng nên đọc kỹ Chính sách bảo mật và Điều kiện sử dụng của các ứng dụng của bên thứ ba trước khi cung cấp thông tin cá nhân cho các ứng dụng đó. Chúng tôi không chịu trách nhiệm dưới bất kỳ hình thức nào về nội dung và tính pháp lý của ứng dụng thuộc bên thứ ba."
+        },
+        {
+          "text": "Hủy, xóa dữ liệu về thông tin khách hàng",
+          "textBold": true,
+          "description": "Khách hàng có thể yêu cầu KAR hủy/xóa bỏ dữ liệu về thông tin cá nhân của mình đã cung cấp trong quá trình sử dụng dịch vụ của chúng tôi đến email theo thông tin sau: support.kar@cores.vn. Toàn bộ dữ liệu và thông tin cá nhân của khách hàng sau đó sẽ bị xóa khỏi hệ thống của KAR và chúng tôi sẽ không tiếp tục thu thập không tin cá nhân của khách hàng. Khách hàng đồng thời lưu ý việc hủy/xóa bỏ dữ liệu này đồng nghĩa với việc khách hàng không còn là thành viên và cũng như không thể tiếp tục sử dụng dịch  vụ đăng tin mua bán xe, tìm kiếm xe trên ứng dụng KAR. Mọi giao dịch, số dư tài khoản, thông tin tin đã đăng của khách hàng của khách hàng cũng đồng thời bị hủy bỏ và KAR không chịu tránh nhiệm hoàn trả bất kỳ chi phí nào cho khách hàng. "
+        }
+      ]
+    },
+    {
+      "name": "I. TRANH CHẤP, KHIẾU NẠI",
+      "description": "KAR là nền tảng trung gian, ban quản lý KAR đề xuất các biện pháp và cách giải quyết tranh chấp sau:",
+      "data": [
+        {
+          "text": "",
+          "isPaddingLetf": true,
+          "child": [
+            "<b>•</b> Tự thỏa thuận<br><b>•</b> Đưa ra cơ quan pháp luật<br><b>•</b> Hình thức khác"
+          ]
+        },
+        {
+          "description": "Ban quản trị ứng dụng KAR sẵn sàng hỗ trợ nhanh nhất và tốt nhất khi nhận được các phản hồi, khiếu nại về việc tin đăng/quảng cáo của người bán không chuẩn xác, sai sự thật, và các vấn đề sai phạm liên quan khác bằng việc hỗ trợ hạ tin, xóa tin, thông tin tới người bán."
+        },
+        {
+          "description": "Trường hợp khách hàng gửi thông tin khiếu nại trực tiếp đến ban quản trị KAR qua email hotro@karsales.asia, ban quản trị KAR sẽ cố gắng có email phải hồi lại ý kiến phản ánh của khách hàng từ 03-05 ngày làm việc kể từ khi nhận được phản hồi của khách hàng."
+        },
+        {
+          "text": "Quy trình tiếp nhận và xử lý",
+          "textBold": true,
+          "isPaddingLetf": true,
+          "child": [
+            "1. Thành viên khiếu nại thông tin qua email: support.kar@cores.vn cho các nội dung như: Tin đăng không đúng với thực tế; tin đăng lừa đảo, thông tin người bán không đúng, …",
+            "2. Bộ phận Chăm Sóc Khách Hàng của KAR sẽ tiếp nhận các khiếu nại của thành viên, tùy theo tính chất và mức độ của khiếu nại thì KAR sẽ có những biện pháp cụ thể hỗ trợ thành viên để giải quyết tranh chấp đó.",
+            "3. Trong trường hợp nằm ngoài khả năng và thẩm quyền của KAR thì ban quản trị sẽ yêu cầu thành viên đưa vụ việc này ra cơ quan nhà nước có thẩm quyền giải quyết theo pháp luật."
+          ]
+        },
+        {
+          "description": "KAR tôn trọng và nghiêm túc thực hiện các quy định của pháp luật về bảo vệ quyền lợi của người mua (người tiêu dùng). Vì vậy, mọi hành vi lừa đảo, gian lận trong kinh doanh đều bị lên án và phải chịu hoàn toàn trách nhiệm trước pháp luật."
+        }
+      ]
+    },
+    {
+      "name": "J. LIÊN HỆ",
+      "description": "Chính sách bảo mật của Sàn giao dịch điện tử KAR chính thức có hiệu lực thi hành kể từ ngày 12/12/2021. Sàn giao dịch điện tử KAR có quyền và có thể thay đổi Quy chế này bằng cách thông báo lên Sàn giao dịch điện tử KAR cho các thành viên biết. Chính sách bảo mật sửa đổi có hiệu lực kể từ ngày Quyết định về việc sửa đổi Chính sách có hiệu lực. Việc thành viên tiếp tục sử dụng dịch vụ sau khi Chính sách sửa đổi được công bố và thực thi đồng nghĩa với việc thành viên đã chấp nhận Chính sách sửa đổi này.",
+      "data": [
+        {
+          "description": "Chính sách bảo mật sẽ được KAR cập nhật bổ sung liên tục mà không cần thông báo trước. Thành viên tham gia KAR trách nhiệm tuân theo quy chế hiện hành khi giao dịch trên ứng dụng điện thoại KAR."
+        },
+        {
+          "description": "Mọi thắc mắc của khách hàng xin vui lòng liên hệ với KAR theo thông tin dưới đây để được giải đáp.<br><br>"
+        },
+        {
+          "description": "CÔNG TY TNHH GIẢI PHÁP CÔNG NGHỆ THÔNG TIN CORES VIỆT NAM"
+        },
+        {
+          "description": "Địa chỉ: 53/6K, Nam Lân, Bà Điểm, Hóc Môn, Hồ Chí Minh"
+        },
+        {
+          "description": "Hotline: 08.2934.5552"
+        },
+        {
+          "description": "Email: support.kar@cores.vn"
+        },
+        {
+          "description": "Website: https://karsales.asia"
+        },
+        {
+          "description": "Xin chân thành cám ơn các bạn đã sử dụng dịch vụ của chúng tôi. Với mong muốn xây dựng một sàn giao dịch ô tô online hàng đầu tại Việt Nam, chúng tôi hi vọng sẽ phục vụ quý khách ngày càng tốt hơn và đáp ứng được những nhu cầu về giao dịch ô tô của quý khách."
+        },
+        {
+          "description": "Toàn bộ chính sách sử dụng này được đăng tải trên ứng dụng KAR và website (nếu có) áp dụng từ ngày 12/12/2021."
+        }
+      ]
+    }
+  ]
+}

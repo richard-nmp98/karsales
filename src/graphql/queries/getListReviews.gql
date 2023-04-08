@@ -1,0 +1,58 @@
+query getListReviews($input: PagingReviewsInput!) {
+	getListReviews(input: $input) {
+		items {
+			categories {
+				createdAt
+				id
+				isActive
+				nameEn
+				nameVi
+				slug
+				total
+				updatedAt
+			}
+			category
+			contentEn
+			contentVi
+			createdAt
+			descriptionEn
+			descriptionVi
+			id
+			isActive
+			mediaIds
+			medias {
+				createdAt
+				deletedAt
+				fileName
+				filePathLG
+				filePathOriginal
+				filePathSM
+				id
+				isDeleted
+				mimeType
+				updatedAt
+				uploadBy
+			}
+			nameEn
+			nameVi
+			slug
+			thumnail
+			updatedAt
+		}
+		links {
+			first
+			last
+			next
+			previous
+		}
+		meta {
+			currentPage
+			itemCount
+			itemsPerPage
+			next
+			previous
+			totalItems
+			totalPages
+		}
+	}
+}

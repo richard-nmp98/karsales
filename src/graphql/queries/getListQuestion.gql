@@ -1,0 +1,21 @@
+query getListQuestion {
+	getListQuestion {
+		answers {
+			content
+			correctAnswer
+			id
+			no
+			parentNo
+			questionId
+		}
+		answerType
+		content
+		explainAnswer
+		id
+		imageExplainAnswer
+		images
+		isActive
+		no
+		type
+	}
+}

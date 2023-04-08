@@ -1,0 +1,25 @@
+query listBannerByPosition($input: BannerPositionInput!) {
+	listBannerByPosition(input: $input) {
+		createdAt
+		id
+		isActive
+		linkBanner
+		mediaIds
+		medias {
+			createdAt
+			deletedAt
+			fileName
+			filePathLG
+			filePathOriginal
+			filePathSM
+			id
+			isDeleted
+			mimeType
+			updatedAt
+			uploadBy
+		}
+		name
+		positionId
+		updatedAt
+	}
+}

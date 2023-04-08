@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'Averta Std CY';
+    src: url('./fonts/kar/AvertaStdCY-Black.eot');
+    src: local('Averta Std CY Black'), local('AvertaStdCY-Black'),
+    url('./fonts/kar/AvertaStdCY-Black.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/kar/AvertaStdCY-Black.woff2') format('woff2'),
+    url('./fonts/kar/AvertaStdCY-Black.woff') format('woff'),
+    url('./fonts/kar/AvertaStdCY-Black.ttf') format('truetype'),
+    url('./fonts/kar/AvertaStdCY-Black.svg#AvertaStdCY-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta Std CY';
+    src: url('./fonts/kar/AvertaStdCY-BlackItalic.eot');
+    src: local('Averta Std CY Black Italic'), local('AvertaStdCY-BlackItalic'),
+    url('./fonts/kar/AvertaStdCY-BlackItalic.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/kar/AvertaStdCY-BlackItalic.woff2') format('woff2'),
+    url('./fonts/kar/AvertaStdCY-BlackItalic.woff') format('woff'),
+    url('./fonts/kar/AvertaStdCY-BlackItalic.ttf') format('truetype'),
+    url('./fonts/kar/AvertaStdCY-BlackItalic.svg#AvertaStdCY-BlackItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta Std CY';
+    src: url('./fonts/kar/AvertaStdCY-BoldItalic.eot');
+    src: local('Averta Std CY Bold Italic'), local('AvertaStdCY-BoldItalic'),
+    url('./fonts/kar/AvertaStdCY-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/kar/AvertaStdCY-BoldItalic.woff2') format('woff2'),
+    url('./fonts/kar/AvertaStdCY-BoldItalic.woff') format('woff'),
+    url('./fonts/kar/AvertaStdCY-BoldItalic.ttf') format('truetype'),
+    url('./fonts/kar/AvertaStdCY-BoldItalic.svg#AvertaStdCY-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta Std CY';
+    src: url('./fonts/kar/AvertaStdCY-ExtraboldItalic.eot');
+    src: local('Averta Std CY Extrabold Italic'), local('AvertaStdCY-ExtraboldItalic'),
+    url('./fonts/kar/AvertaStdCY-ExtraboldItalic.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/kar/AvertaStdCY-ExtraboldItalic.woff2') format('woff2'),
+    url('./fonts/kar/AvertaStdCY-ExtraboldItalic.woff') format('woff'),
+    url('./fonts/kar/AvertaStdCY-ExtraboldItalic.ttf') format('truetype'),
+    url('./fonts/kar/AvertaStdCY-ExtraboldItalic.svg#AvertaStdCY-ExtraboldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta Std CY';
+    src: url('./fonts/kar/AvertaStdCY-Bold.eot');
+    src: local('Averta Std CY Bold'), local('AvertaStdCY-Bold'),
+    url('./fonts/kar/AvertaStdCY-Bold.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/kar/AvertaStdCY-Bold.woff2') format('woff2'),
+    url('./fonts/kar/AvertaStdCY-Bold.woff') format('woff'),
+    url('./fonts/kar/AvertaStdCY-Bold.ttf') format('truetype'),
+    url('./fonts/kar/AvertaStdCY-Bold.svg#AvertaStdCY-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta Std CY';
+    src: url('./fonts/kar/AvertaStdCY-Extrabold.eot');
+    src: local('Averta Std CY Extrabold'), local('AvertaStdCY-Extrabold'),
+    url('./fonts/kar/AvertaStdCY-Extrabold.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/kar/AvertaStdCY-Extrabold.woff2') format('woff2'),
+    url('./fonts/kar/AvertaStdCY-Extrabold.woff') format('woff'),
+    url('./fonts/kar/AvertaStdCY-Extrabold.ttf') format('truetype'),
+    url('./fonts/kar/AvertaStdCY-Extrabold.svg#AvertaStdCY-Extrabold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta Std CY';
+    src: url('./fonts/kar/AvertaStdCY-LightItalic.eot');
+    src: local('Averta Std CY Light Italic'), local('AvertaStdCY-LightItalic'),
+    url('./fonts/kar/AvertaStdCY-LightItalic.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/kar/AvertaStdCY-LightItalic.woff2') format('woff2'),
+    url('./fonts/kar/AvertaStdCY-LightItalic.woff') format('woff'),
+    url('./fonts/kar/AvertaStdCY-LightItalic.ttf') format('truetype'),
+    url('./fonts/kar/AvertaStdCY-LightItalic.svg#AvertaStdCY-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta Std CY Extrathin';
+    src: url('./fonts/kar/AvertaStdCY-Extrathin.eot');
+    src: local('Averta Std CY Extrathin'), local('AvertaStdCY-Extrathin'),
+    url('./fonts/kar/AvertaStdCY-Extrathin.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/kar/AvertaStdCY-Extrathin.woff2') format('woff2'),
+    url('./fonts/kar/AvertaStdCY-Extrathin.woff') format('woff'),
+    url('./fonts/kar/AvertaStdCY-Extrathin.ttf') format('truetype'),
+    url('./fonts/kar/AvertaStdCY-Extrathin.svg#AvertaStdCY-Extrathin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta Std CY';
+    src: url('./fonts/kar/AvertaStdCY-Regular.eot');
+    src: local('Averta Std CY Regular'), local('AvertaStdCY-Regular'),
+    url('./fonts/kar/AvertaStdCY-Regular.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/kar/AvertaStdCY-Regular.woff2') format('woff2'),
+    url('./fonts/kar/AvertaStdCY-Regular.woff') format('woff'),
+    url('./fonts/kar/AvertaStdCY-Regular.ttf') format('truetype'),
+    url('./fonts/kar/AvertaStdCY-Regular.svg#AvertaStdCY-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta Std CY Extrathin';
+    src: url('./fonts/kar/AvertaStdCY-ExtrathinItalic.eot');
+    src: local('Averta Std CY Extrathin Italic'), local('AvertaStdCY-ExtrathinItalic'),
+    url('./fonts/kar/AvertaStdCY-ExtrathinItalic.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/kar/AvertaStdCY-ExtrathinItalic.woff2') format('woff2'),
+    url('./fonts/kar/AvertaStdCY-ExtrathinItalic.woff') format('woff'),
+    url('./fonts/kar/AvertaStdCY-ExtrathinItalic.ttf') format('truetype'),
+    url('./fonts/kar/AvertaStdCY-ExtrathinItalic.svg#AvertaStdCY-ExtrathinItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta Std CY';
+    src: url('./fonts/kar/AvertaStdCY-Semibold.eot');
+    src: local('Averta Std CY Semibold'), local('AvertaStdCY-Semibold'),
+    url('./fonts/kar/AvertaStdCY-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/kar/AvertaStdCY-Semibold.woff2') format('woff2'),
+    url('./fonts/kar/AvertaStdCY-Semibold.woff') format('woff'),
+    url('./fonts/kar/AvertaStdCY-Semibold.ttf') format('truetype'),
+    url('./fonts/kar/AvertaStdCY-Semibold.svg#AvertaStdCY-Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta Std CY';
+    src: url('./fonts/kar/AvertaStdCY-Light.eot');
+    src: local('Averta Std CY Light'), local('AvertaStdCY-Light'),
+    url('./fonts/kar/AvertaStdCY-Light.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/kar/AvertaStdCY-Light.woff2') format('woff2'),
+    url('./fonts/kar/AvertaStdCY-Light.woff') format('woff'),
+    url('./fonts/kar/AvertaStdCY-Light.ttf') format('truetype'),
+    url('./fonts/kar/AvertaStdCY-Light.svg#AvertaStdCY-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta Std CY';
+    src: url('./fonts/kar/AvertaStdCY-RegularItalic.eot');
+    src: local('Averta Std CY Regular Italic'), local('AvertaStdCY-RegularItalic'),
+    url('./fonts/kar/AvertaStdCY-RegularItalic.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/kar/AvertaStdCY-RegularItalic.woff2') format('woff2'),
+    url('./fonts/kar/AvertaStdCY-RegularItalic.woff') format('woff'),
+    url('./fonts/kar/AvertaStdCY-RegularItalic.ttf') format('truetype'),
+    url('./fonts/kar/AvertaStdCY-RegularItalic.svg#AvertaStdCY-RegularItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta Std CY';
+    src: url('./fonts/kar/AvertaStdCY-SemiboldItalic.eot');
+    src: local('Averta Std CY Semibold Italic'), local('AvertaStdCY-SemiboldItalic'),
+    url('./fonts/kar/AvertaStdCY-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/kar/AvertaStdCY-SemiboldItalic.woff2') format('woff2'),
+    url('./fonts/kar/AvertaStdCY-SemiboldItalic.woff') format('woff'),
+    url('./fonts/kar/AvertaStdCY-SemiboldItalic.ttf') format('truetype'),
+    url('./fonts/kar/AvertaStdCY-SemiboldItalic.svg#AvertaStdCY-SemiboldItalic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta Std CY';
+    src: url('./fonts/kar/AvertaStdCY-Thin.eot');
+    src: local('Averta Std CY Thin'), local('AvertaStdCY-Thin'),
+    url('./fonts/kar/AvertaStdCY-Thin.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/kar/AvertaStdCY-Thin.woff2') format('woff2'),
+    url('./fonts/kar/AvertaStdCY-Thin.woff') format('woff'),
+    url('./fonts/kar/AvertaStdCY-Thin.ttf') format('truetype'),
+    url('./fonts/kar/AvertaStdCY-Thin.svg#AvertaStdCY-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta Std CY';
+    src: url('./fonts/kar/AvertaStdCY-ThinItalic.eot');
+    src: local('Averta Std CY Thin Italic'), local('AvertaStdCY-ThinItalic'),
+    url('./fonts/kar/AvertaStdCY-ThinItalic.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/kar/AvertaStdCY-ThinItalic.woff2') format('woff2'),
+    url('./fonts/kar/AvertaStdCY-ThinItalic.woff') format('woff'),
+    url('./fonts/kar/AvertaStdCY-ThinItalic.ttf') format('truetype'),
+    url('./fonts/kar/AvertaStdCY-ThinItalic.svg#AvertaStdCY-ThinItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}

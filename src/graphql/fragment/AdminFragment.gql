@@ -1,0 +1,8 @@
+fragment AdminUserFragment on AdminUser {
+  id
+  firstName
+  email
+  lastName
+  isActive
+  fullName
+}

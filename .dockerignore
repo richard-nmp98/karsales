@@ -1,0 +1,4 @@
+codegen
+docker
+.vscode
+.env*.local

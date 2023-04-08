@@ -1,0 +1,49 @@
+query getListQuestionSimulationByType($input: QuestionSimulationGroupByTypeInput!) {
+	getListQuestionSimulationByType(input: $input) {
+		answers {
+			id
+			minuteFrom
+			minuteTo
+			no
+			parentNo
+			point
+			questionId
+			secondFrom
+			secondTo
+		}
+		content
+		explainAnswer
+		id
+		imageDetail {
+			createdAt
+			deletedAt
+			fileName
+			filePathLG
+			filePathOriginal
+			filePathSM
+			id
+			isDeleted
+			mimeType
+			updatedAt
+			uploadBy
+		}
+		images
+		mediaDetail {
+			createdAt
+			deletedAt
+			fileName
+			filePathLG
+			filePathOriginal
+			filePathSM
+			id
+			isDeleted
+			mimeType
+			updatedAt
+			uploadBy
+		}
+		no
+		pointLastOfUser
+		type
+		videos
+	}
+}

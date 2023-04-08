@@ -1,0 +1,27 @@
+query provinces($countryCode: String!, $input: PagingCommonInput!) {
+	provinces(countryCode: $countryCode, input: $input) {
+		items {
+			code
+			countryCode
+			id
+			isActive
+			name
+			slug
+		}
+		links {
+			first
+			last
+			next
+			previous
+		}
+		meta {
+			currentPage
+			itemCount
+			itemsPerPage
+			next
+			previous
+			totalItems
+			totalPages
+		}
+	}
+}

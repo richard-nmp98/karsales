@@ -1,0 +1,304 @@
+query getListPostActive($input: ListPostInput!) {
+	getListPostActive(input: $input) {
+		items {
+			bannerGroup {
+				createdAt
+				id
+				isActive
+				linkBanner
+				mediaIds
+				medias {
+					createdAt
+					deletedAt
+					fileName
+					filePathLG
+					filePathOriginal
+					filePathSM
+					id
+					isDeleted
+					mimeType
+					updatedAt
+					uploadBy
+				}
+				name
+				positionId
+				updatedAt
+			}
+			bannerPositionId
+			bodyType {
+				createdAt
+				id
+				isActive
+				name
+				slug
+			}
+			brand {
+				id
+				image
+				isActive
+				isDisplayTopSearch
+				mediaDetail {
+					createdAt
+					deletedAt
+					fileName
+					filePathLG
+					filePathOriginal
+					filePathSM
+					id
+					isDeleted
+					mimeType
+					updatedAt
+					uploadBy
+				}
+				mediaId
+				name
+				slug
+			}
+			city {
+				code
+				countryCode
+				id
+				isActive
+				name
+				slug
+			}
+			cityId
+			colour {
+				createdAt
+				id
+				isActive
+				name
+				slug
+			}
+			condition
+			countryCode
+			createdAt
+			currency
+			description
+			door
+			driverType {
+				createdAt
+				id
+				isActive
+				nameEn
+				nameVi
+				slug
+			}
+			fuelEconomy {
+				createdAt
+				id
+				isActive
+				isLess
+				kilometer
+				liter
+				nameEn
+				nameVi
+			}
+			fuelType {
+				createdAt
+				id
+				isActive
+				name
+				slug
+			}
+			hiddenPrice
+			hidePlateMedias {
+				createdAt
+				id
+				isFeatured
+				isHidePlate
+				mediaDetail {
+					createdAt
+					deletedAt
+					fileName
+					filePathLG
+					filePathOriginal
+					filePathSM
+					id
+					isDeleted
+					mimeType
+					updatedAt
+					uploadBy
+				}
+				mediaId
+				postId
+				updatedAt
+			}
+			id
+			includeTax
+			inspection
+			isReport
+			isSaved
+			medias {
+				createdAt
+				id
+				isFeatured
+				isHidePlate
+				mediaDetail {
+					createdAt
+					deletedAt
+					fileName
+					filePathLG
+					filePathOriginal
+					filePathSM
+					id
+					isDeleted
+					mimeType
+					updatedAt
+					uploadBy
+				}
+				mediaId
+				postId
+				updatedAt
+			}
+			model {
+				brand
+				brandMeta {
+					id
+					image
+					isActive
+					isDisplayTopSearch
+					mediaDetail {
+						createdAt
+						deletedAt
+						fileName
+						filePathLG
+						filePathOriginal
+						filePathSM
+						id
+						isDeleted
+						mimeType
+						updatedAt
+						uploadBy
+					}
+					mediaId
+					name
+					slug
+				}
+				id
+				image
+				isActive
+				name
+				slug
+			}
+			odometer
+			offer
+			planExpried
+			planId
+			plateHidden
+			price
+			regExprice
+			regPlate
+			remoteAssessment
+			roadworthyCeftificate
+			seat
+			showHiddenPrice
+			slug
+			status
+			statusReasonRejected {
+				createdAt
+				id
+				note
+				planId
+				postId
+				remainingPlanDay
+				remainingPlanMinutes
+				remainingPlanUnit
+				status
+				updatedAt
+				updatedById
+			}
+			stepDraft
+			title
+			totalView
+			transmission
+			updatedAt
+			user {
+				avatar
+				avatarMedia {
+					createdAt
+					deletedAt
+					fileName
+					filePathLG
+					filePathOriginal
+					filePathSM
+					id
+					isDeleted
+					mimeType
+					updatedAt
+					uploadBy
+				}
+				createdAt
+				dob
+				email
+				firstName
+				hasPassword
+				id
+				isActive
+				isActiveEmail
+				isActivePhone
+				isWithdraw
+				lastLoginAt
+				lastName
+				metadata {
+					avgRating
+					cityId
+					country {
+						code
+						id
+						name
+					}
+					countryId
+					enableEmailNotification
+					enableNotification
+					enablePromotionsEmailNotification
+					enablePromotionsNotification
+					enableSMS
+					id
+					language
+					provice {
+						code
+						countryCode
+						id
+						isActive
+						name
+						slug
+					}
+					totalRating
+					userId
+				}
+				phone
+				prefixPhone
+				referralCode
+				storeName
+				updatedAt
+				userBalance {
+					amount
+					id
+					promotion
+					userId
+				}
+				username
+				withdrawReason
+			}
+			userId
+			videoUrl
+			year
+		}
+		links {
+			first
+			last
+			next
+			previous
+		}
+		meta {
+			currentPage
+			itemCount
+			itemsPerPage
+			next
+			previous
+			totalItems
+			totalPages
+		}
+	}
+}

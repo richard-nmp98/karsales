@@ -1,0 +1,148 @@
+fragment PostFragment on PostEntity {
+  id
+  createdAt
+  updatedAt
+  title
+  plateHidden
+  videoUrl
+  condition
+  price
+  currency
+  includeTax
+  countryCode
+  userId
+  cityId
+  odometer
+  stepDraft
+  year
+  regPlate
+  regExprice
+  transmission
+  status
+  description
+  offer
+  inspection
+  planExpried
+  remoteAssessment
+  roadworthyCeftificate
+  planId
+  medias {
+    id
+    postId
+    mediaId
+    isFeatured
+    createdAt
+    updatedAt
+    mediaDetail {
+      id
+      fileName
+      filePathSM
+      filePathLG
+      filePathOriginal
+      mimeType
+      uploadBy
+      isDeleted
+      deletedAt
+      createdAt
+      updatedAt
+    }
+  }
+  brand {
+    id
+    name
+    slug
+    image
+    isActive
+  }
+  model {
+    id
+    name
+    image
+    brand
+    slug
+    isActive
+    brandMeta {
+      id
+      name
+      slug
+      image
+      isActive
+    }
+  }
+  bodyType {
+    id
+    name
+    slug
+    isActive
+    createdAt
+  }
+  colour {
+    id
+    name
+    slug
+    isActive
+    createdAt
+  }
+  fuelType {
+    id
+    name
+    slug
+    isActive
+    createdAt
+  }
+  fuelEconomy {
+    id
+    nameVi
+    nameEn
+    liter
+    kilometer
+    isLess
+    isActive
+    createdAt
+  }
+  driverType {
+    id
+    nameEn
+    nameVi
+    slug
+    isActive
+    createdAt
+  }
+  seat
+  door
+  city {
+    id
+    name
+    countryCode
+  }
+  user {
+    id
+    email
+    username
+    phone
+    prefixPhone
+    firstName
+    lastName
+    avatar
+    dob
+    isActive
+    createdAt
+    updatedAt
+    isActiveEmail
+    isActivePhone
+    referralCode
+    avatarMedia {
+      id
+      fileName
+      filePathSM
+      filePathLG
+      filePathOriginal
+      mimeType
+      uploadBy
+      isDeleted
+      deletedAt
+      createdAt
+      updatedAt
+    }
+  }
+}

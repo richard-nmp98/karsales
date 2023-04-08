@@ -1,0 +1,41 @@
+query getReviewDetail($slug: String!) {
+	getReviewDetail(slug: $slug) {
+		categories {
+			createdAt
+			id
+			isActive
+			nameEn
+			nameVi
+			slug
+			total
+			updatedAt
+		}
+		category
+		contentEn
+		contentVi
+		createdAt
+		descriptionEn
+		descriptionVi
+		id
+		isActive
+		mediaIds
+		medias {
+			createdAt
+			deletedAt
+			fileName
+			filePathLG
+			filePathOriginal
+			filePathSM
+			id
+			isDeleted
+			mimeType
+			updatedAt
+			uploadBy
+		}
+		nameEn
+		nameVi
+		slug
+		thumnail
+		updatedAt
+	}
+}

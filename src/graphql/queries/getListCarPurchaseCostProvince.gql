@@ -1,0 +1,25 @@
+query getListCarPurchaseCostProvince {
+	getListCarPurchaseCostProvince {
+		bodyInsuranceOneYear
+		civilInsurance
+		createdAt
+		id
+		isActive
+		licensePlateFee
+		otherCost
+		proviceDetail {
+			code
+			countryCode
+			id
+			isActive
+			name
+			slug
+		}
+		provinceId
+		registrationFeeNewCar
+		registrationFeeOldCar
+		registry
+		roadMaintenanceFee
+		updatedAt
+	}
+}

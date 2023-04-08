@@ -1,0 +1,11 @@
+query listBannerPosition {
+	listBannerPosition {
+		createdAt
+		id
+		name
+		ratioHeight
+		ratioWidth
+		type
+		updatedAt
+	}
+}

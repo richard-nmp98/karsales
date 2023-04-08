@@ -1,0 +1,52 @@
+fragment UserFragment on UserEntity {
+  id
+  email
+  username
+  phone
+  prefixPhone
+  firstName
+  lastName
+  avatar
+  dob
+  isActive
+  createdAt
+  updatedAt
+  isActiveEmail
+  isActivePhone
+  referralCode
+  metadata {
+    id
+    countryId
+    cityId
+    userId
+    enableNotification
+    enableEmailNotification
+    enableSMS
+    enablePromotionsNotification
+    enablePromotionsEmailNotification
+    provice {
+      id
+      name
+      countryCode
+    }
+    country {
+      id
+      name
+      code
+    }
+  }
+  hasPassword
+  avatarMedia {
+    id
+    fileName
+    filePathSM
+    filePathLG
+    filePathOriginal
+    mimeType
+    uploadBy
+    isDeleted
+    deletedAt
+    createdAt
+    updatedAt
+  }
+}
