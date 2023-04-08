@@ -23,7 +23,7 @@
     "codegen": "graphql-codegen --config codegen/codegen.js && yarn schema:codegen",
     "typegen": "graphql-codegen --config codegen/codegen.yml"
   },
-  "proxy": "http://api-dev.karsales.asia",
+  "proxy": "http://api.karsales.asia",
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
     "@apollo/client": "3.3.6",
